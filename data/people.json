@@ -1,0 +1,23 @@
+[
+  {
+    "id": "PI",
+    "Name": "Dr. Junghwan Byun",
+    "role": "지도교수",
+    "category": "professor",
+    "email": "prof.kim@university.ac.kr",
+    "photo": "/members/prof-kim.jpg",
+    "research": "머신러닝, 자연어처리",
+    "homepage": "https://example.com"
+  },
+  {
+    "id": "student-lee",
+    "name": "이학생",
+    "englishName": "Lee Student",
+    "role": "박사과정 3년차",
+    "category": "phd",
+    "email": "lee@university.ac.kr",
+    "photo": "/members/student-lee.jpg",
+    "research": "강화학습",
+    "homepage": ""
+  }
+]

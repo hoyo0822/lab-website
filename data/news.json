@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "date": "2026-04-20",
+    "title": "신입 박사과정 모집",
+    "category": "공지",
+    "content": "2026학년도 후기 신입 박사과정을 모집합니다. 자세한 내용은 ...",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "date": "2026-03-15",
+    "title": "NeurIPS 2025 논문 채택",
+    "category": "수상",
+    "content": "저희 연구실의 논문이 NeurIPS 2025에 채택되었습니다.",
+    "image": "/news/neurips-2025.jpg"
+  }
+]

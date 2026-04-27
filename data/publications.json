@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "year": 2025,
+    "title": "Deep Learning for Scientific Discovery",
+    "authors": ["김교수", "이학생", "박학생"],
+    "venue": "NeurIPS 2025",
+    "type": "conference",
+    "link": "https://arxiv.org/abs/xxxx.xxxxx",
+    "pdf": "/publications/2025-neurips.pdf"
+  },
+  {
+    "id": 2,
+    "year": 2024,
+    "title": "A Novel Approach to ○○",
+    "authors": ["김교수", "이학생"],
+    "venue": "Nature 2024",
+    "type": "journal",
+    "link": "https://example.com",
+    "pdf": ""
+  }
+]
