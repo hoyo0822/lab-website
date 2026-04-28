@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Lab Group Photo 2026",
+    "description": "2026년 연구실 단체 사진",
+    "image": "/gallery/group-2026.jpg",
+    "date": "2026-03"
+  },
+  {
+    "id": 2,
+    "title": "Robot Prototype Demo",
+    "description": "소프트 로봇 프로토타입 시연",
+    "image": "/gallery/robot-demo.jpg",
+    "date": "2025-11"
+  },
+  {
+    "id": 3,
+    "title": "Conference Presentation",
+    "description": "국제학회 발표",
+    "image": "/gallery/conference.jpg",
+    "date": "2025-09"
+  }
+]

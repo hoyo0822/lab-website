@@ -17,9 +17,12 @@ export default function RootLayout({ children }) {
               {labInfo.englishName}
             </Link>
             <ul className="flex gap-6 text-sm">
-              <li><Link href="/members" className="hover:text-blue-600">Members</Link></li>
+              <li><Link href="/research" className="hover:text-blue-600">Research</Link></li>
+              <li><Link href="/people" className="hover:text-blue-600">People</Link></li>
               <li><Link href="/publications" className="hover:text-blue-600">Publications</Link></li>
               <li><Link href="/news" className="hover:text-blue-600">News</Link></li>
+              <li><Link href="/gallery" className="hover:text-blue-600">Gallery</Link></li>
+              <li><Link href="/opportunities" className="hover:text-blue-600">Opportunities</Link></li>
               <li><Link href="/contact" className="hover:text-blue-600">Contact</Link></li>
             </ul>
           </nav>

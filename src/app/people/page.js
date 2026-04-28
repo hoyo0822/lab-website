@@ -1,4 +1,4 @@
-import members from "../../../data/members.json";
+import members from "../../../data/people.json";
 
 const categoryLabels = {
   professor: "지도교수",
