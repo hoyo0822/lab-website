@@ -39,7 +39,7 @@ export default function RoboticSkinPage() {
       }} />
 
       {/* Images */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "2.5rem" }}>
+      <div className="img-grid-2">
         {["/research/robotic-skin-1.png", "/research/robotic-skin-2.png"].map((src, i) => (
           <div key={i} style={{
             position: "relative", aspectRatio: "4/3",

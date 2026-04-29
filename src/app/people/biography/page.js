@@ -75,13 +75,7 @@ export default function BiographyPage() {
       </div>
 
       {/* Profile header */}
-      <div style={{
-        display: "flex",
-        gap: "2.5rem",
-        alignItems: "flex-start",
-        marginBottom: "3rem",
-        flexWrap: "wrap",
-      }}>
+      <div className="bio-profile-flex">
         {/* Photo */}
         <div style={{
           flexShrink: 0,

@@ -27,7 +27,7 @@ export default function ResearchPage() {
       </p>
 
       {/* Research image grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "4px" }}>
+      <div className="research-areas-grid">
         {research.areas.map((area) => (
           <Link key={area.id} href={area.link} className="research-area">
             <Image

@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             <div style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "0 2rem",
+              padding: "0 1.25rem",
               height: "68px",
               display: "flex",
               alignItems: "center",
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           </main>
 
           {/* ── FOOTER ── */}
-          <footer style={{ padding: "2.5rem 2rem" }}>
+          <footer style={{ padding: "2rem 1.5rem" }}>
             <div style={{
               maxWidth: "1200px",
               margin: "0 auto",

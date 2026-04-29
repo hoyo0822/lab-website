@@ -41,7 +41,7 @@ export default function MetamaterialsPage() {
       }} />
 
       {/* Images */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem", marginBottom: "2.5rem" }}>
+      <div className="img-grid-3">
         {["/research/metamaterials-1.png", "/research/metamaterials-2.png", "/research/metamaterials-3.png"].map((src, i) => (
           <div key={i} style={{
             position: "relative", aspectRatio: "4/3",

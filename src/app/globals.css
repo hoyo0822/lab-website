@@ -460,3 +460,151 @@ hr.divider, .divider {
 .bg-surface    { background: var(--surface); }
 .bg-alt        { background: var(--bg-alt); }
 .border-std    { border: 1px solid var(--border); }
+
+/* ─── Mobile / Responsive ────────────────────────────────── */
+
+/* Nav: hamburger button (mobile only) */
+.nav-hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1.05rem;
+  width: 34px; height: 34px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color var(--transition), color var(--transition);
+}
+.nav-hamburger:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Mobile controls wrapper (theme toggle + hamburger) */
+.nav-mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Mobile full-screen menu */
+.nav-mobile-menu {
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  z-index: 99;
+  animation: fadeIn 0.18s ease;
+}
+.nav-mobile-item {
+  display: block;
+  padding: 0.9rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition), color var(--transition);
+}
+.nav-mobile-item:last-child { border-bottom: none; }
+.nav-mobile-item:hover { background: var(--accent-soft); color: var(--accent); }
+.nav-mobile-item.active { color: var(--accent); font-weight: 700; }
+
+@media (max-width: 768px) {
+  .nav-list { display: none !important; }
+  .nav-mobile-controls { display: flex !important; }
+}
+
+/* Home: Research Highlights + News two-column */
+.home-highlights-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .home-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Home: Meet the Team photo */
+.meet-team-photo {
+  position: relative;
+  width: clamp(160px, 30%, 260px);
+  min-height: 180px;
+  flex-shrink: 0;
+}
+@media (max-width: 540px) {
+  .meet-team-photo {
+    width: 100% !important;
+    height: 200px !important;
+    min-height: unset !important;
+  }
+}
+
+/* Home: Join group inner flex */
+.join-group-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+@media (max-width: 480px) {
+  .join-group-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+/* Research: 4-col area grid */
+.research-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+@media (max-width: 600px) {
+  .research-areas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Research detail: image grids */
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.img-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 600px) {
+  .img-grid-2 { grid-template-columns: 1fr; }
+  .img-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 380px) {
+  .img-grid-3 { grid-template-columns: 1fr; }
+}
+
+/* Biography profile flex */
+.bio-profile-flex {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+/* General mobile padding reduction */
+@media (max-width: 640px) {
+  .mobile-pad { padding-left: 1rem !important; padding-right: 1rem !important; }
+}

@@ -41,7 +41,7 @@ export default function MicrorobotsPage() {
       }} />
 
       {/* Images */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem", marginBottom: "2.5rem" }}>
+      <div className="img-grid-3">
         {["/research/microrobots-1.png", "/research/microrobots-2.png", "/research/microrobots-3.png"].map((src, i) => (
           <div key={i} style={{
             position: "relative", aspectRatio: "4/3",

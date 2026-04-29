@@ -83,12 +83,7 @@ export default function Home() {
           overflow: "hidden", display: "flex", alignItems: "stretch", flexWrap: "wrap",
         }}>
           {/* Photo */}
-          <div style={{
-            position: "relative",
-            width: "clamp(160px, 30%, 260px)",
-            minHeight: "180px",
-            flexShrink: 0,
-          }}>
+          <div className="meet-team-photo">
             <Image
               src="/hero.jpg"
               alt="BIRD Lab team"
@@ -120,12 +115,7 @@ export default function Home() {
       {/* ── RESEARCH HIGHLIGHTS + RECENT NEWS ── */}
       <section style={{ padding: "1rem 2rem 3rem" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "280px 1fr",
-            gap: "3rem",
-            alignItems: "start",
-          }}>
+          <div className="home-highlights-grid">
 
             {/* LEFT: Cover slideshow */}
             <div>
@@ -192,11 +182,7 @@ export default function Home() {
               position: "absolute", inset: 0,
               background: "linear-gradient(135deg, rgba(0,0,0,0.50) 0%, rgba(43,87,154,0.40) 100%)",
             }} />
-            <div style={{
-              position: "absolute", inset: 0,
-              display: "flex", alignItems: "center", justifyContent: "space-between",
-              padding: "0 2rem", gap: "1rem",
-            }}>
+            <div className="join-group-inner">
               <div>
                 <h2 style={{
                   fontSize: "1.25rem", fontWeight: 700,
