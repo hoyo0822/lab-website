@@ -519,7 +519,7 @@ hr.divider, .divider {
 /* Home: Research Highlights + News two-column */
 .home-highlights-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 360px 1fr;
   gap: 3rem;
   align-items: start;
 }

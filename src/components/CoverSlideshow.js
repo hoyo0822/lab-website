@@ -26,8 +26,8 @@ export default function CoverSlideshow({ covers }) {
       {/* Main image */}
       <div style={{
         position: "relative",
-        width: "200px",
-        height: "360px",
+        width: "100%",
+        height: "200px",
         borderRadius: "6px",
         overflow: "hidden",
         boxShadow: "var(--shadow-lg)",
