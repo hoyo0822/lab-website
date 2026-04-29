@@ -27,10 +27,11 @@ export default function CoverSlideshow({ covers }) {
       <div style={{
         position: "relative",
         width: "100%",
-        height: "200px",
+        height: "240px",
         borderRadius: "6px",
         overflow: "hidden",
         boxShadow: "var(--shadow-lg)",
+        background: "var(--bg-alt)",
         opacity: visible ? 1 : 0,
         transform: visible ? "scale(1)" : "scale(0.97)",
         transition: "opacity 0.4s ease, transform 0.4s ease",
@@ -39,7 +40,7 @@ export default function CoverSlideshow({ covers }) {
           src={cover.image}
           alt={cover.journal}
           fill
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "contain", padding: "8px" }}
         />
       </div>
 
