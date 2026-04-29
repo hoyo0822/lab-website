@@ -11,8 +11,8 @@
         "date": "December 30, 2025",
         "caption": "Year-end Workshop 👋",
         "photos": [
-          "/gallery/20251230-183039.jpg",
-          "/gallery/1767102864860.jpg"
+          "/gallery/2025-7/20251230-183039.jpg",
+          "/gallery/2025-7/1767102864860.jpg"
         ]
       },
       {
@@ -20,13 +20,13 @@
         "date": "July 2-4, 2025",
         "caption": "Nano Korea 2025, KINTEX",
         "photos": [
-          "/gallery/1751519552067.jpg",
-          "/gallery/1000028662.jpg",
-          "/gallery/1000028647.jpg",
-          "/gallery/1000029139.jpg",
-          "/gallery/1000028626.jpg",
-          "/gallery/1000028639.jpg",
-          "/gallery/1000028660.jpg"
+          "/gallery/2025-6/1751519552067.jpg",
+          "/gallery/2025-5/1000028626.jpg",
+          "/gallery/2025-5/1000028639.jpg",
+          "/gallery/2025-5/1000028647.jpg",
+          "/gallery/2025-5/1000028660.jpg",
+          "/gallery/2025-5/1000028662.jpg",
+          "/gallery/2025-5/1000029139.jpg"
         ]
       },
       {
@@ -34,9 +34,9 @@
         "date": "April 16-18, 2025",
         "caption": "2025 PSK Annual Spring Meeting, Jeju island",
         "photos": [
-          "/gallery/1000028508.jpg",
-          "/gallery/1000028510.jpg",
-          "/gallery/1000028509.jpg"
+          "/gallery/2025-4/1000028508.jpg",
+          "/gallery/2025-4/1000028509.jpg",
+          "/gallery/2025-4/1000028510.jpg"
         ]
       },
       {
@@ -44,22 +44,9 @@
         "date": "April 8, 2025",
         "caption": "🌸 Annual Spring Picnic 🌸",
         "photos": [
-          "/gallery/1000028366.jpg",
-          "/gallery/1000028363.jpg",
-          "/gallery/1000028367.jpg"
-        ]
-      },
-      {
-        "id": "2025-bbq",
-        "date": "March 28, 2025",
-        "caption": "Beef BBQ 🍖",
-        "photos": [
-          "/gallery/kakaotalk-20250306-134205795-02.jpg",
-          "/gallery/kakaotalk-20250306-134205795-07.jpg",
-          "/gallery/kakaotalk-20250306-134205795-10.jpg",
-          "/gallery/kakaotalk-20250306-134205795-11.jpg",
-          "/gallery/kakaotalk-20250306-134258845-01.jpg",
-          "/gallery/kakaotalk-20250306-134258845.jpg"
+          "/gallery/2025-3/1000028363.jpg",
+          "/gallery/2025-3/1000028366.jpg",
+          "/gallery/2025-3/1000028367.jpg"
         ]
       },
       {
@@ -67,27 +54,9 @@
         "date": "March 7, 2025",
         "caption": "Group Photo with New Members Jaeyoung, Junhyeong, Seungwon, Welcome! 🎉",
         "photos": [
-          "/gallery/kakaotalk-20250307-152827015-02.jpg",
-          "/gallery/kakaotalk-20250307-152827015-06.jpg",
-          "/gallery/kakaotalk-20250304-151351734.jpg",
-          "/gallery/kakaotalk-20250304-151352642.jpg"
-        ]
-      },
-      {
-        "id": "2025-lab-gathering",
-        "date": "February 26, 2025",
-        "caption": "Lab Gathering",
-        "photos": [
-          "/gallery/kakaotalk-20250226-131053094-01.jpg",
-          "/gallery/kakaotalk-20250226-131135384-02.jpg"
-        ]
-      },
-      {
-        "id": "2025-srrc",
-        "date": "February 21, 2025",
-        "caption": "Dr. Byun's Talk, SRRC Workshop",
-        "photos": [
-          "/gallery/929254533.png"
+          "/gallery/2025-2/kakaotalk-20250307-152827015-02.jpg",
+          "/gallery/2025-2/kakaotalk-20250307-152827015-06.jpg",
+          "/gallery/2025-1/kakaotalk-20250304-151352642.jpg"
         ]
       }
     ]
@@ -96,37 +65,51 @@
     "year": 2024,
     "events": [
       {
+        "id": "2024-bbq",
+        "date": "March 2024",
+        "caption": "Beef BBQ 🍖",
+        "photos": [
+          "/gallery/2024-5/kakaotalk-20250306-134258845-01.jpg",
+          "/gallery/2024-5/kakaotalk-20250306-134258845.jpg",
+          "/gallery/2024-4/kakaotalk-20250306-134205795-02.jpg",
+          "/gallery/2024-4/kakaotalk-20250306-134205795-07.jpg",
+          "/gallery/2024-4/kakaotalk-20250306-134205795-10.jpg",
+          "/gallery/2024-4/kakaotalk-20250306-134205795-11.jpg"
+        ]
+      },
+      {
+        "id": "2024-srrc",
+        "date": "February 2024",
+        "caption": "Dr. Byun's Talk, SRRC Workshop",
+        "photos": [
+          "/gallery/2024-4/929254533.png"
+        ]
+      },
+      {
         "id": "2024-sports",
         "date": "May 20, 2024",
         "caption": "Center Sports Day 🏃",
         "photos": [
-          "/gallery/1.png",
-          "/gallery/2.png"
+          "/gallery/2024-4/1.png",
+          "/gallery/2024-4/2.png"
         ]
       },
       {
-        "id": "2024-picnic",
-        "date": "April 5, 2024",
-        "caption": "🌸 Spring Picnic 🌸",
-        "photos": []
-      },
-      {
-        "id": "2024-firstphoto",
+        "id": "2024-groupphoto",
         "date": "March 4, 2024",
         "caption": "ISMAR-Lab, First Group Photo",
-        "photos": []
+        "photos": [
+          "/gallery/2024-3/kakaotalk-20250226-131135384-02.jpg"
+        ]
       },
       {
-        "id": "2024-kroc",
-        "date": "February 21-24, 2024",
-        "caption": "Dr. Byun's Talk, KRoC 2024",
-        "photos": []
-      },
-      {
-        "id": "2024-birthday",
-        "date": "January 21, 2024",
-        "caption": "Dr. Byun's Birthday 🎂 Congrats!!",
-        "photos": []
+        "id": "2024-gathering",
+        "date": "February 2024",
+        "caption": "Lab Gathering",
+        "photos": [
+          "/gallery/2024-2/kakaotalk-20250304-151351734.jpg",
+          "/gallery/2024_1/kakaotalk-20250226-131053094-01.jpg"
+        ]
       }
     ]
   }

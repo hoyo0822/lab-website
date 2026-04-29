@@ -126,7 +126,7 @@ export default function Home() {
                 paddingBottom: "0.5rem",
                 borderBottom: "1px solid var(--border)",
               }}>
-                Research Highlights &amp; Updates
+                Research Highlights
               </h2>
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <CoverSlideshow covers={pubData.covers} />

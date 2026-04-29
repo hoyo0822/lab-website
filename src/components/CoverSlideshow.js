@@ -27,7 +27,7 @@ export default function CoverSlideshow({ covers }) {
       <div style={{
         position: "relative",
         width: "200px",
-        height: "280px",
+        height: "360px",
         borderRadius: "6px",
         overflow: "hidden",
         boxShadow: "var(--shadow-lg)",
