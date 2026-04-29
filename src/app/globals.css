@@ -465,7 +465,7 @@ hr.divider, .divider {
 
 /* Nav: hamburger button (mobile only) */
 .nav-hamburger {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   background: none;
