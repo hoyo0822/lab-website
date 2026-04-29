@@ -1,9 +1,18 @@
 {
   "name": "Bio-Interactive Robot Design Lab",
+  "englishName": "BIRD Lab",
+  "shortName": "BIRDlab",
   "tagline": "at Korea Institute of Science and Technology (KIST)",
+  "heroTitle": "Bio-Interactive Robot Design Lab",
   "title1": "We foster bio-interactive intelligence by designing cutting-edge robot systems",
-  "description1": "​We aim to create intelligent robot systems at the intersection of architected materials, soft electronics, soft robotics, AI, and biomedical engineering. Our goal spans a broad range of future robot applications from cellular/tissue-scale microrobots to human-scale robotic skin and to environment-scale robotic construction.",
-  "title2": "Meet the Team!",
-  "description2": "We are a group of scientists, researchers, and students interested in topics ranging from metamaterials, soft electronics, soft robots, biomedical engineering, and AI",
-  "title2": "Research Highlights and Updates!"
+  "description1": "We aim to create intelligent robot systems at the intersection of architected materials, soft electronics, soft robotics, AI, and biomedical engineering. Our goal spans a broad range of future robot applications from cellular/tissue-scale microrobots to human-scale robotic skin and to environment-scale robotic construction.",
+  "addressLine1": "KIST Electronic and Hybrid Materials Research Center",
+  "addressLine2": "Hwarang-ro 14-gil 5, Seongbuk-gu, Seoul, South Korea (02792)",
+  "email": "junghwan@kist.re.kr",
+  "phone": "+82-2-958-5357",
+  "copyright": "Junghwan Byun",
+  "googleScholar": "https://scholar.google.com/citations?user=EXAMPLE",
+  "heroSlides": [
+    "/hero.jpg"
+  ]
 }

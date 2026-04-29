@@ -1,23 +1,104 @@
-[
-  {
-    "id": "PI",
-    "Name": "Dr. Junghwan Byun",
-    "role": "지도교수",
-    "category": "professor",
-    "email": "prof.kim@university.ac.kr",
-    "photo": "/members/prof-kim.jpg",
-    "research": "머신러닝, 자연어처리",
-    "homepage": "https://example.com"
+{
+  "pi": {
+    "id": "pi",
+    "name": "Junghwan Byun",
+    "title": "Principal Investigator",
+    "role": "Senior Research Scientist",
+    "institution1": "Electronic and Hybrid Materials Research Center",
+    "institution2": "Korea Institute of Science and Technology (KIST)",
+    "phone": "+82-2-958-5357",
+    "email": "junghwan@kist.re.kr",
+    "office": "L4344",
+    "address1": "5, Hwarang-ro 14-gil, Seongbuk-gu",
+    "address2": "Seoul 02792, Republic of Korea",
+    "photo": "/people/pi.jpg",
+    "biography": "/people/biography",
+    "googleScholar": "https://scholar.google.com/citations?user=EXAMPLE"
   },
-  {
-    "id": "student-lee",
-    "name": "이학생",
-    "englishName": "Lee Student",
-    "role": "박사과정 3년차",
-    "category": "phd",
-    "email": "lee@university.ac.kr",
-    "photo": "/members/student-lee.jpg",
-    "research": "강화학습",
-    "homepage": ""
-  }
-]
+  "members": [
+    {
+      "id": "choi-sejin",
+      "name": "Sejin Choi, M.D.",
+      "role": "Visiting Scientist",
+      "category": "postdoc",
+      "photo": "/people/choi-sejin.png"
+    },
+    {
+      "id": "ko-junghyeon",
+      "name": "Junghyeon Ko, Ph.D.",
+      "role": "Postdoctoral Associate",
+      "category": "postdoc",
+      "photo": "/people/ko-junghyeon.jpg"
+    },
+    {
+      "id": "yu-sungyol",
+      "name": "Sung Yol Yu, Ph.D.",
+      "role": "Postdoctoral Associate",
+      "category": "postdoc",
+      "photo": "/people/yu-sungyol.png"
+    },
+    {
+      "id": "kang-wonkyeong",
+      "name": "Wonkyeong Kang",
+      "role": "Graduate Student",
+      "category": "phd",
+      "photo": "/people/kang-wonkyeong.png"
+    },
+    {
+      "id": "jung-hoyoung",
+      "name": "Hoyoung Jung",
+      "role": "Graduate Student",
+      "category": "phd",
+      "photo": "/people/jung-hoyoung.jpg"
+    },
+    {
+      "id": "choi-jaeyoung",
+      "name": "Jaeyoung Choi",
+      "role": "Graduate Student",
+      "category": "phd",
+      "photo": "/people/choi-jaeyoung.jpg"
+    },
+    {
+      "id": "lim-seungwon",
+      "name": "Seungwon Lim",
+      "role": "Graduate Student",
+      "category": "phd",
+      "photo": "/people/lim-seungwon.jpg"
+    },
+    {
+      "id": "hong-hyunjin",
+      "name": "Hyunjin Hong",
+      "role": "Graduate Student",
+      "category": "phd",
+      "photo": "/people/hong-hyunjin.jpeg"
+    },
+    {
+      "id": "jung-jino",
+      "name": "Jino Jung",
+      "role": "Undergraduate Intern",
+      "category": "intern",
+      "photo": "/people/jung-jino.png"
+    },
+    {
+      "id": "park-boae",
+      "name": "Boae Park",
+      "role": "Undergraduate Intern",
+      "category": "intern",
+      "photo": "/people/park-boae.png"
+    }
+  ],
+  "alumni": [
+    {
+      "id": "park-byeonghak",
+      "name": "Dr. Byeonghak Park",
+      "period": "Postdoctoral Associate (Mar. 2024 ~ Aug. 2025)",
+      "current": "Assistant Professor, College of Medicine, The Catholic University of Korea"
+    },
+    {
+      "id": "park-junhyeong",
+      "name": "Junhyeong Park",
+      "period": "Undergraduate Intern (Mar. 2025 ~ Jun. 2025)",
+      "current": "KAIST"
+    }
+  ]
+}

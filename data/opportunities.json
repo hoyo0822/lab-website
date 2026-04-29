@@ -1,42 +1,30 @@
 {
-  "intro": "Bio-Interactive Robot Design Lab은 열정적인 연구자를 모집합니다. 로봇공학, 재료공학, 생체의학, AI 분야에 관심 있는 분들의 지원을 환영합니다.",
+  "intro": "BIRDlab is dedicated to providing the ideal environment for passionate scientists and engineers to engage in multidisciplinary teaming and innovative thinking. We are currently seeking exceptional candidates who are highly self-motivated, collaborative and open-minded to multidisciplinary research projects, rather than previous experience or achievements. If you are interested in joining BIRDlab, please email CV and research interests to junghwan@kist.re.kr",
   "positions": [
     {
       "id": 1,
-      "type": "PhD",
-      "title": "박사과정 연구원 모집",
-      "description": "소프트 로봇, 마이크로로봇, AI 관련 연구를 함께 수행할 박사과정 학생을 모집합니다.",
+      "type": "Postdoc",
+      "title": "Postdocs",
+      "description": "Currently 2 openings (expertise in 1) magnetic microrobots and 2) soft actuator, and/or metamaterials)",
       "requirements": [
-        "기계공학, 전기공학, 재료공학, 바이오공학 또는 관련 분야 석사 학위 (또는 취득 예정)",
-        "연구에 대한 열정과 독립적인 문제 해결 능력",
-        "영어 논문 작성 및 의사소통 능력"
+        "Candidates should hold a doctoral degree in Materials Science & Engineering, Mechanical Engineering, Electrical/Electronic Engineering, Biomedical Engineering or other relevant fields."
       ],
       "open": true
     },
     {
       "id": 2,
-      "type": "Master",
-      "title": "석사과정 연구원 모집",
-      "description": "연구실의 다양한 프로젝트에 참여할 석사과정 학생을 모집합니다.",
+      "type": "Graduate",
+      "title": "Graduate students (MS, PhD or MS-PhD integrated course)",
+      "description": "Prospective MS/PhD students who want to foster creativity, collaboration, and world-leading research experience in the following research topics are encouraged to apply to our group:",
       "requirements": [
-        "관련 분야 학사 학위 (또는 취득 예정)",
-        "기초 프로그래밍 능력 (Python, MATLAB 등)",
-        "팀워크와 적극적인 연구 자세"
+        "Biomedical microrobots for cancer therapeutics, blood vessel diseases, nerve/immune systems, and inflammation",
+        "Architected design, mechanical metamaterials, mechanical transition waves, and mechanical computing",
+        "AI-assisted large-area robotic skin",
+        "Soft robot, robotic adaptive construction, and underwater swimming carpet",
+        "Robotic energy harvesting (wind energy, wave energy, etc.)"
       ],
       "open": true
-    },
-    {
-      "id": 3,
-      "type": "Postdoc",
-      "title": "박사후 연구원 모집",
-      "description": "특정 프로젝트를 주도적으로 이끌어갈 박사후 연구원을 모집합니다. 구체적인 포지션은 이메일로 문의해 주세요.",
-      "requirements": [
-        "관련 분야 박사 학위",
-        "국제 저널/학회 논문 실적",
-        "독립적인 연구 수행 능력"
-      ],
-      "open": false
     }
   ],
-  "contactNote": "관심 있으신 분은 CV와 간단한 연구 계획서를 첨부하여 이메일로 연락 주세요."
+  "contactEmail": "junghwan@kist.re.kr"
 }

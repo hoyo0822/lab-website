@@ -1,22 +1,307 @@
-[
-  {
-    "id": 1,
-    "year": 2025,
-    "title": "Deep Learning for Scientific Discovery",
-    "authors": ["김교수", "이학생", "박학생"],
-    "venue": "NeurIPS 2025",
-    "type": "conference",
-    "link": "https://arxiv.org/abs/xxxx.xxxxx",
-    "pdf": "/publications/2025-neurips.pdf"
-  },
-  {
-    "id": 2,
-    "year": 2024,
-    "title": "A Novel Approach to ○○",
-    "authors": ["김교수", "이학생"],
-    "venue": "Nature 2024",
-    "type": "journal",
-    "link": "https://example.com",
-    "pdf": ""
-  }
-]
+{
+  "googleScholar": "https://scholar.google.com/citations?user=EXAMPLE",
+  "covers": [
+    { "id": 1, "image": "/covers/natcomm2-2024.png",     "journal": "Nat. Commun. 2024" },
+    { "id": 2, "image": "/covers/advintelsyst-2023.png", "journal": "Adv. Intell. Syst. 2023" },
+    { "id": 3, "image": "/covers/natcomm-2023.png",      "journal": "Nat. Commun. 2023" },
+    { "id": 4, "image": "/covers/scirobot-2021.png",     "journal": "Sci. Robot. 2021" },
+    { "id": 5, "image": "/covers/scirobot-2019.png",     "journal": "Sci. Robot. 2019" },
+    { "id": 6, "image": "/covers/amt-2021.png",          "journal": "Adv. Mat. Tech. 2021" },
+    { "id": 7, "image": "/covers/scirobot2-2018.png",    "journal": "Sci. Robot. 2018" }
+  ],
+  "list": [
+    {
+      "id": 26,
+      "title": "Microrobotic copper-rich electrochemical interfacing for targeted cancer theranostics in the gut",
+      "authors": "J. Byun#*, S. Jang#, Y. Wu#, J. Choi#, U. Bozuyuk, J. Ko, A. C. Karacakol, E. H. Kim, S. Chun, A. Aghakhani, S. Chung, J. Zhang, Y. Yang*, M. Sitti*",
+      "pi": "J. Byun",
+      "venue": "Science Advances",
+      "venueColor": "#c00000",
+      "details": "12, eaeb5934 (2026)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/sciadv.aeb5934.pdf",
+      "year": 2026
+    },
+    {
+      "id": 25,
+      "title": "Pixelation-free, monolithic iontronic pressure sensors enabling large-area simultaneous pressure and position recognition via machine learning",
+      "authors": "J. Kim, J. Lee, K.-H. Choi, S. Im, J. H. Kim, C. Choi, J. Byun, C. Shin, H. W. Jang, H. Ju, J. A. Lim",
+      "pi": "J. Byun",
+      "venue": "Advanced Functional Materials",
+      "venueColor": "#7030A0",
+      "details": "e27178 (2025)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/pixelation_free__monolithic_iontronic.pdf",
+      "year": 2025
+    },
+    {
+      "id": 24,
+      "title": "Light-responsive enzyme-loaded nanoparticles for tunable adhesion and mechanical wound contraction",
+      "authors": "J. Ko, H.-J. Kim, J.-U. Kim, S. R. Oh, T. H. Kang, J. Byun, U.-J. Lee, M. Ma, S.-H. Kim, B.-G. Kim, N. S. Hwang",
+      "pi": "J. Byun",
+      "venue": "Advanced Functional Materials",
+      "venueColor": "#7030A0",
+      "details": "e14917 (2025)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/light_responsive_enzyme_loaded.pdf",
+      "year": 2025
+    },
+    {
+      "id": 23,
+      "title": "Bidirectional zero Poisson's ratio elastomers with self-deformable soft mechanical metamaterials for stretchable displays",
+      "authors": "J.-C. Choi, H. Y. Jeong, J.-H. Sun, J. Byun, J. Oh, S. J. Hwang, P. Lee, D. W. Lee, J. G. Son, S. Lee, S. Chung",
+      "pi": "J. Byun",
+      "venue": "Advanced Functional Materials",
+      "venueColor": "#7030A0",
+      "details": "34, 2406725 (2024)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/bidirectional_zero_poissons.pdf",
+      "year": 2024
+    },
+    {
+      "id": 22,
+      "title": "Integrated mechanical computing for autonomous soft machines",
+      "authors": "J. Byun, A. Pal, J. Ko, M. Sitti",
+      "pi": "J. Byun",
+      "venue": "Nature Communications",
+      "venueColor": "#1a6b3a",
+      "details": "15, 2933 (2024)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/integrated_mechanical_computing.pdf",
+      "year": 2024
+    },
+    {
+      "id": 21,
+      "title": "Micro- and nanofabrication of dynamic hydrogels with multichannel information",
+      "authors": "M. Zhang, Y. Lee, Z. Zheng, M. T. Ali Khan, X. Lyu, J. Byun, H. Giessen*, M. Sitti*",
+      "pi": "J. Byun",
+      "venue": "Nature Communications",
+      "venueColor": "#1a6b3a",
+      "details": "14, 8208 (2023)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/micro_and_nanofabrication.pdf",
+      "year": 2023
+    },
+    {
+      "id": 20,
+      "title": "Magnetic putty as a reconfigurable, recyclable, and accessible soft robotic material",
+      "authors": "M. Li, J. Byun, A. Pal, G. Gardi, M. Sitti",
+      "pi": "J. Byun",
+      "venue": "Advanced Materials",
+      "venueColor": "#c00000",
+      "details": "35, 2304825 (2023)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/magnetic_putty.pdf",
+      "year": 2023
+    },
+    {
+      "id": 19,
+      "title": "Reconfigurable innervation of modular soft machines via soft, sticky, and instant electronic adhesive interlocking",
+      "authors": "J. Yoon#, J. Byun#, M. Park, K.-J. Cho, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Advanced Intelligent Systems",
+      "venueColor": "#2B579A",
+      "details": "5, 2300013 (2023)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/reconfigurable_innervation.pdf",
+      "year": 2023,
+      "note": "Front Cover Article"
+    },
+    {
+      "id": 18,
+      "title": "Deployable soft origami modular robotic arm with variable stiffness using facet buckling",
+      "authors": "M. J. Park, W. Kim, S.-Y. Yu, J. Cho, W. Kang, J. Byun, U. Jeong, K.-J. Cho",
+      "pi": "J. Byun",
+      "venue": "IEEE Robot. Autom. Lett.",
+      "venueColor": "#2B579A",
+      "details": "8, 864 (2022)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/deployable_soft_origami.pdf",
+      "year": 2022
+    },
+    {
+      "id": 17,
+      "title": "4D printing of continuous shape representation",
+      "authors": "S.-J. Ahn#, J. Byun#, H.-J. Joo, J.-H. Jung, D.-Y. Lee, K.-J. Cho",
+      "pi": "J. Byun",
+      "venue": "Advanced Materials Technologies",
+      "venueColor": "#2B579A",
+      "details": "6, 2100133 (2021)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/4d_printing_of_continuous.pdf",
+      "year": 2021,
+      "note": "Front Cover Article"
+    },
+    {
+      "id": 16,
+      "title": "Underwater maneuvering of robotic sheets through buoyancy-mediated active flutter",
+      "authors": "J. Byun, M. Park, S.-M. Baek, J. Yoon, W. Kim, B. Lee, Y. Hong, K.-J. Cho",
+      "pi": "J. Byun",
+      "venue": "Science Robotics",
+      "venueColor": "#c00000",
+      "details": "6, eabe0637 (2021)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/underwater_maneuvering.pdf",
+      "year": 2021
+    },
+    {
+      "id": 15,
+      "title": "Ultraflexible and transparent electroluminescent skin for real-time and super-resolution imaging of pressure distribution",
+      "authors": "B. Lee, J.-Y. Oh, H. Cho, C. W. Joo, H. Yoon, S. Jeong, E. Oh, J. Byun, H. Kim, S. Lee, J. Seo, C. W. Park, S. Choi, N.-M. Park, S.-Y. Kang, C.-S. Hwang, S.-D. Ahn, J.-I. Lee, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Nature Communications",
+      "venueColor": "#1a6b3a",
+      "details": "11, 663 (2020)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/ultraflexible_and_transparent.pdf",
+      "year": 2020
+    },
+    {
+      "id": 14,
+      "title": "Stretchable strain-tolerant soft printed circuit board: A systematic approach for design rules of stretchable interconnects",
+      "authors": "H. Cho, Y. Lee, B. Lee, J. Byun, S. Chung, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Journal of Information Display",
+      "venueColor": "#555",
+      "details": "21, 41 (2019)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/stretchable_strain_tolerant.pdf",
+      "year": 2019
+    },
+    {
+      "id": 13,
+      "title": "Bioinspired Dual-morphing Stretchable Origami",
+      "authors": "W. Kim#, J. Byun#, J.-K. Kim, W.-Y. Choi, K. Jakobsen, J. Jakobsen, D.-Y. Lee, K.-J. Cho",
+      "pi": "J. Byun",
+      "venue": "Science Robotics",
+      "venueColor": "#c00000",
+      "details": "4, eaay3493 (2019)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/bioinspired_dual_morphing.pdf",
+      "year": 2019,
+      "note": "Front Cover Article"
+    },
+    {
+      "id": 12,
+      "title": "Soft modular electronic blocks (SMEBs): A strategy for tailored wearable health-monitoring systems",
+      "authors": "J. Yoon, Y. Joo, E. Oh, B. Lee, D. Kim, S. Lee, T. Kim, J. Byun*, Y. Hong*",
+      "pi": "J. Byun",
+      "venue": "Advanced Science",
+      "venueColor": "#1a5c8a",
+      "details": "6, 1801682 (2019)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/soft_modular_electronic_blocks.pdf",
+      "year": 2019,
+      "note": "Front Cover Article"
+    },
+    {
+      "id": 11,
+      "title": "Highly reliable liquid metal-solid metal contacts with a corrugated single-walled carbon nanotube diffusion barrier for stretchable electronics",
+      "authors": "E. Oh, T. Kim, J. Yoon, S. Lee, D. Kim, B. Lee, J. Byun, H. Cho, J. Ha, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Advanced Functional Materials",
+      "venueColor": "#7030A0",
+      "details": "28, 1806014 (2018)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/highly_reliable_liquid_metal.pdf",
+      "year": 2018,
+      "note": "Inside Front Cover Article"
+    },
+    {
+      "id": 10,
+      "title": "Artificial soft elastic media with periodic hard inclusions for tailoring strain-sensitive thin film responses",
+      "authors": "J. Byun, S. Chung, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Advanced Materials",
+      "venueColor": "#c00000",
+      "details": "30, 1802190 (2018)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/artificial_soft_elastic_media.pdf",
+      "year": 2018,
+      "note": "Back Cover Article"
+    },
+    {
+      "id": 9,
+      "title": "Two-dimensional thickness-dependent avalanche breakdown phenomena in MoS2 field-effect transistors under high electric fields",
+      "authors": "J. Park, Y. Jang, J. Byun, K. Cho, T.-Y. Kim, J.-K. Kim, B. Y. Choi, J. Shin, Y. Hong, S. Chung, T. Lee",
+      "pi": "J. Byun",
+      "venue": "ACS Nano",
+      "venueColor": "#1a5c8a",
+      "details": "12, 7109 (2018)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/two_dimensional_thickness.pdf",
+      "year": 2018
+    },
+    {
+      "id": 8,
+      "title": "Electronic skins for soft, compact, reversible assembly of wirelessly activated fully soft robots",
+      "authors": "J. Byun, Y. Lee, J. Yoon, E. Oh, B. Lee, S. Chung, T. Lee, K.-J. Cho, J. Kim, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Science Robotics",
+      "venueColor": "#c00000",
+      "details": "3, eaas9020 (2018)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/electronic_skins_for_soft.pdf",
+      "year": 2018
+    },
+    {
+      "id": 7,
+      "title": "Printed cylindrical lens pair for application to the seam concealment in tiled displays",
+      "authors": "S. Lee, S. Lee, H. Yoon, C.-K. Lee, C. Yoo, J. Park, J. Byun, G. Kim, B. Lee, B. Lee, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Optics Express",
+      "venueColor": "#555",
+      "details": "26, 824 (2018)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/printed_cylindrical_lens.pdf",
+      "year": 2018
+    },
+    {
+      "id": 6,
+      "title": "A single droplet-printed double-side universal soft electronic platform for highly-integrated stretchable hybrid electronics",
+      "authors": "J. Byun, E. Oh, B. Lee, S. Kim, S. Lee, Y. Hong",
+      "pi": "J. Byun",
+      "venue": "Advanced Functional Materials",
+      "venueColor": "#7030A0",
+      "details": "27, 1701912 (2017)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/a_single_droplet_printed.pdf",
+      "year": 2017
+    },
+    {
+      "id": 5,
+      "title": "Fully printable, strain-engineered electronic wrap for customizable soft electronics",
+      "authors": "J. Byun, B. Lee, E. Oh, H. Kim, S. Kim, S. Lee, Y. Hong*",
+      "pi": "J. Byun",
+      "venue": "Scientific Reports",
+      "venueColor": "#555",
+      "details": "7, 45328 (2017)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/fully_printable_strain.pdf",
+      "year": 2017
+    },
+    {
+      "id": 4,
+      "title": "Modulus-gradient conductive core-shell structures formed by magnetic self-assembling and printing processes for highly stretchable via applications",
+      "authors": "E. Oh, J. Byun, B. Lee, S. Kim, D. Kim, J. Yoon, Y. Hong*",
+      "pi": "J. Byun",
+      "venue": "Advanced Electronic Materials",
+      "venueColor": "#2B579A",
+      "details": "3, 1600517 (2017)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/modulus_gradient_conductive.pdf",
+      "year": 2017
+    },
+    {
+      "id": 3,
+      "title": "Revisit to three-dimensional percolation theory: accurate analysis for highly stretchable conductive composite materials",
+      "authors": "S. Kim, S. Choi, E. Oh, J. Byun, H. Kim, B. Lee, S. Lee, Y. Hong*",
+      "pi": "J. Byun",
+      "venue": "Scientific Reports",
+      "venueColor": "#555",
+      "details": "6, 34632 (2016)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/revisit_to_three_dimensional.pdf",
+      "year": 2016
+    },
+    {
+      "id": 2,
+      "title": "Silver nanowire-embedded PDMS with multiscale structure for highly sensitive and robust flexible pressure sensor",
+      "authors": "Y. Joo, J. Byun, N. Seong, J. Ha, H. Kim, S. Kim, T. Kim, H. Im, D. Kim, Y. Hong*",
+      "pi": "J. Byun",
+      "venue": "Nanoscale",
+      "venueColor": "#1a5c8a",
+      "details": "7, 6208 (2015)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/silver_nanowire_embedded.pdf",
+      "year": 2015
+    },
+    {
+      "id": 1,
+      "title": "Negatively strain-dependent electrical resistance of magnetically arranged nickel composites: application to highly stretchable electrodes and stretchable lighting devices",
+      "authors": "S. Kim, J. Byun, S. Choi, D. Kim, T. Kim, S. Chung, Y. Hong*",
+      "pi": "J. Byun",
+      "venue": "Advanced Materials",
+      "venueColor": "#c00000",
+      "details": "26, 3094 (2014)",
+      "pdf": "http://www.junghwanbyun.com/uploads/1/3/0/1/130188250/negatively_strain_dependent.pdf",
+      "year": 2014,
+      "note": "Front Cover Article"
+    }
+  ]
+}

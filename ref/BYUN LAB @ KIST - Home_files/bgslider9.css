@@ -1,0 +1,17 @@
+.wsite-section.hideBg {
+	background: none!important;
+	position: relative;
+}
+
+.wsite-section.hideBg .container {
+} 
+
+.bgsliderwad {
+	position: absolute!important;
+	top: 0;
+	left: 0;
+	width: 100%!important;
+	height: 100%!important;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);	
+}

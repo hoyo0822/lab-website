@@ -1,26 +1,34 @@
-[
-  {
-    "id": 1,
-    "title": "Soft Robotics",
-    "subtitle": "Biologically-inspired flexible robot systems",
-    "description": "생체 모방 구조를 활용한 유연 로봇 시스템 개발. 다양한 환경에 적응 가능한 소프트 액추에이터와 센서를 연구합니다.",
-    "image": "/research/soft-robotics.jpg",
-    "tags": ["Soft Actuators", "Bio-inspired Design", "Flexible Electronics"]
-  },
-  {
-    "id": 2,
-    "title": "Microrobotics",
-    "subtitle": "Cellular and tissue-scale microrobots",
-    "description": "세포·조직 스케일의 마이크로로봇을 설계하여 의료 진단 및 치료 응용을 목표로 합니다.",
-    "image": "/research/microrobotics.jpg",
-    "tags": ["Microrobot", "Biomedical", "MEMS"]
-  },
-  {
-    "id": 3,
-    "title": "AI & Robot Intelligence",
-    "subtitle": "Machine learning for adaptive robotic behavior",
-    "description": "강화학습과 딥러닝을 결합하여 로봇이 복잡한 환경에서 스스로 적응하는 지능을 부여합니다.",
-    "image": "/research/ai-robot.jpg",
-    "tags": ["Reinforcement Learning", "Deep Learning", "Adaptive Control"]
-  }
-]
+{
+  "intro": "Our group is interested in designing and building bio-interactive robot systems with yet-to-be conceived functionalities. The backbone of our research is highly multidisciplinary at the intersection between Architected Materials, Soft Electronics, Soft Robotics, and Biomedical Engineering. The goal of our group spans a broad range of future robot applications from meter-scale marine energy harvesting, human-scale skin computer and actuation system down to microscale biomedical robots for cutting-edge cancer therapeutics.",
+  "clickNote": "Please click the below highlighting images for the details on each subject.",
+  "areas": [
+    {
+      "id": 1,
+      "title": "Soft robot",
+      "image": "/research/soft-robot.jpg",
+      "color": "#2c3e50",
+      "link": "/research/soft-robot"
+    },
+    {
+      "id": 2,
+      "title": "Robotic skin",
+      "image": "/research/robotic-skin.jpg",
+      "color": "#34495e",
+      "link": "/research/robotic-skin"
+    },
+    {
+      "id": 3,
+      "title": "Metamaterials",
+      "image": "/research/metamaterials.jpg",
+      "color": "#1a252f",
+      "link": "/research/metamaterials"
+    },
+    {
+      "id": 4,
+      "title": "Biomedical microrobots",
+      "image": "/research/biomedical-microrobots.jpg",
+      "color": "#2c1a10",
+      "link": "/research/microrobots"
+    }
+  ]
+}

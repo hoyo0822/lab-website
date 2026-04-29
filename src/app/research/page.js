@@ -1,37 +1,58 @@
 import research from "../../../data/research.json";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ResearchPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-10">Research</h1>
-      <div className="space-y-12">
-        {research.map((item) => (
-          <section key={item.id} className="flex flex-col sm:flex-row gap-6 border-b pb-10">
-            {item.image && (
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full sm:w-48 h-36 object-cover rounded-lg flex-shrink-0"
-              />
-            )}
-            <div>
-              <h2 className="text-2xl font-bold mb-1">{item.title}</h2>
-              <p className="text-gray-500 italic mb-3">{item.subtitle}</p>
-              <p className="text-gray-700 leading-relaxed mb-4">{item.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {item.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+    <div style={{ maxWidth: "1000px", margin: "0 auto", padding: "3rem 2rem" }}>
+
+      <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
+        Research Focus
+      </h1>
+      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+        Multidisciplinary science at the frontier of robotics and biology
+      </p>
+      <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "1.8rem" }} />
+
+      <p style={{ fontSize: "0.95rem", lineHeight: 1.9, color: "var(--text-secondary)", marginBottom: "0.8rem", maxWidth: "820px" }}>
+        Our group is interested in designing and building <strong style={{ color: "var(--text)" }}>bio-interactive robot systems</strong> with
+        yet-to-be conceived functionalities. The backbone of our research is highly multidisciplinary at the
+        intersection between <strong style={{ color: "var(--text)" }}>Architected Materials, Soft Electronics, Soft Robotics,</strong> and{" "}
+        <strong style={{ color: "var(--text)" }}>Biomedical Engineering</strong>. The goal of our group spans a broad range of future robot
+        applications from meter-scale marine energy harvesting, human-scale skin computer and actuation system
+        down to microscale biomedical robots for cutting-edge cancer therapeutics.
+      </p>
+      <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", marginBottom: "2.5rem" }}>
+        {research.clickNote}
+      </p>
+
+      {/* Research image grid */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "4px" }}>
+        {research.areas.map((area) => (
+          <Link key={area.id} href={area.link} className="research-area">
+            <Image
+              src={area.image}
+              alt={area.title}
+              fill
+              className="research-area-img"
+              style={{ objectFit: "cover" }}
+            />
+            <div className="research-area-overlay" />
+            <div style={{
+              position: "absolute", bottom: 0, left: 0, right: 0,
+              background: "linear-gradient(transparent, rgba(0,0,0,0.65))",
+              color: "#fff", textAlign: "center",
+              padding: "1.2rem 0.5rem 0.6rem",
+              fontSize: "0.82rem", fontWeight: 600,
+              letterSpacing: "0.03em",
+              zIndex: 2,
+            }}>
+              {area.title}
             </div>
-          </section>
+          </Link>
         ))}
       </div>
+
     </div>
   );
 }

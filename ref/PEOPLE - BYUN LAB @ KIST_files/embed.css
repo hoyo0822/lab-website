@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html,body{margin:0;padding:0;height:100%;overflow:hidden;background:transparent}
+.widget-branding-wrapper{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.widget-branding{position:absolute;display:inline-block;z-index:999;height:14px;text-align:center;font:10px/14px 'Roboto','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:400;color:#000;cursor:default;white-space:nowrap;padding:0 3px;max-width:100%;-webkit-transition:background 0.3s ease;-moz-transition:background 0.3s ease;-o-transition:background 0.3s ease;-ms-transition:background 0.3s ease;transition:background 0.3s ease;background:rgba(255,255,255,0.8);}
+.widget-branding:hover:before{background:rgba(255,255,255,0.9)}
+.widget-branding .details{display:inline-block;max-width:100%}
+.widget-branding a{color:#000;text-decoration:none;max-width:100%;}
+.widget-branding a:hover > span{text-decoration:underline;color:#9d58a9}
+.widget-branding a > span{vertical-align:middle;line-height:14px;display:inline-block}
+@media all and (max-width: 125px){.widget-branding .main-site-url > span:last-child{display:none}
+}@media all and (max-width: 55px){.widget-branding .main-site-url > span:nth-child(2){display:none}
+}.main-site-url{position:relative}
+[data-position*="top"] .widget-branding{top:0}
+[data-position*="bottom"] .widget-branding{bottom:0}
+[data-position*="right"] .widget-branding{right:0}
+[data-position*="left"] .widget-branding{left:0}
+[data-position*="left"] .main-site-url{margin-left:0}

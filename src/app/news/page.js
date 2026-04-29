@@ -1,26 +1,63 @@
-import news from "../../../data/news.json";
+import newsData from "../../../data/news.json";
+import Image from "next/image";
 
 export default function NewsPage() {
-  const sorted = [...news].sort((a, b) => b.date.localeCompare(a.date));
+  const { featured, items } = newsData;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-10">News</h1>
-      <ul className="space-y-8">
-        {sorted.map((item) => (
-          <li key={item.id} className="border-b pb-6">
-            <div className="flex items-center gap-3 text-sm text-gray-500 mb-2">
-              <span>{item.date}</span>
-              <span className="px-2 py-0.5 bg-gray-100 rounded">{item.category}</span>
+    <div style={{ maxWidth: "1000px", margin: "0 auto", padding: "3rem 2rem" }}>
+
+      <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
+        BIRD News
+      </h1>
+      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+        Latest updates from the lab
+      </p>
+      <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "2rem" }} />
+
+      {/* Featured Cards */}
+      {featured && featured.length > 0 && (
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "1.5rem",
+          marginBottom: "3rem",
+        }}>
+          {featured.map((item) => (
+            <div key={item.id} className="news-card">
+              <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10" }}>
+                <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
+              </div>
+              <div style={{ padding: "1.1rem 1.2rem" }}>
+                <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginBottom: "0.35rem", fontWeight: 600, letterSpacing: "0.04em" }}>
+                  {item.date}
+                </p>
+                <p style={{ fontSize: "0.9rem", color: "var(--text)", lineHeight: 1.55, marginBottom: "0.7rem", fontWeight: 500 }}>
+                  {item.title}
+                </p>
+                {item.link && (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer"
+                    style={{ fontSize: "0.82rem", color: "var(--accent2)", fontWeight: 500 }}>
+                    {item.linkLabel || "Link"} ↗
+                  </a>
+                )}
+              </div>
             </div>
-            <h2 className="text-xl font-bold mb-2">{item.title}</h2>
-            {item.image && (
-              <img src={item.image} alt={item.title} className="my-3 rounded max-w-md" />
-            )}
-            <p className="text-gray-700 leading-relaxed whitespace-pre-line">{item.content}</p>
+          ))}
+        </div>
+      )}
+
+      <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "1.8rem" }} />
+
+      {/* News list */}
+      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+        {items.map((item) => (
+          <li key={item.id} className="news-item">
+            {item.text}
           </li>
         ))}
       </ul>
+
     </div>
   );
 }

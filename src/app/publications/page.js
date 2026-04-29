@@ -1,46 +1,96 @@
-import publications from "../../../data/publications.json";
+import pubData from "../../../data/publications.json";
+import Image from "next/image";
+
+function renderAuthors(authorsStr, piName) {
+  if (!piName) return authorsStr;
+  const tokens = authorsStr.split(", ");
+  return tokens.map((token, i) => {
+    const isBold = token.startsWith(piName);
+    return (
+      <span key={i}>
+        {isBold ? <strong><u>{token}</u></strong> : token}
+        {i < tokens.length - 1 ? ", " : ""}
+      </span>
+    );
+  });
+}
 
 export default function PublicationsPage() {
-  // 연도별 그룹화 + 최신순 정렬
-  const byYear = publications.reduce((acc, p) => {
-    if (!acc[p.year]) acc[p.year] = [];
-    acc[p.year].push(p);
-    return acc;
-  }, {});
-  const years = Object.keys(byYear).sort((a, b) => b - a);
+  const { googleScholar, covers, list } = pubData;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-10">Publications</h1>
+    <>
+      {/* ── Journal Covers — full width ── */}
+      <div style={{
+        width: "100%",
+        overflowX: "auto",
+        paddingBottom: "6px",
+        borderBottom: "1px solid var(--border)",
+      }}>
+        <div style={{
+          display: "flex",
+          gap: "0",
+          minWidth: "max-content",
+        }}>
+          {covers.map((cover) => (
+            <div key={cover.id} style={{
+              flex: "0 0 auto",
+              width: "130px",
+              position: "relative",
+              height: "195px",
+              overflow: "hidden",
+            }} className="cover-item">
+              <Image src={cover.image} alt={cover.journal} fill style={{ objectFit: "cover" }} />
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {years.map((year) => (
-        <section key={year} className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 border-b pb-2">{year}</h2>
-          <ul className="space-y-5">
-            {byYear[year].map((p) => (
-              <li key={p.id}>
-                <h3 className="font-semibold mb-1">{p.title}</h3>
-                <p className="text-sm text-gray-600 mb-1">
-                  {p.authors.join(", ")}
-                </p>
-                <p className="text-sm italic text-gray-700 mb-2">{p.venue}</p>
-                <div className="flex gap-3 text-sm">
-                  {p.link && (
-                    <a href={p.link} target="_blank" className="text-blue-600 hover:underline">
-                      [Link]
-                    </a>
-                  )}
-                  {p.pdf && (
-                    <a href={p.pdf} target="_blank" className="text-blue-600 hover:underline">
-                      [PDF]
-                    </a>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
-    </div>
+      {/* ── Publication List ── */}
+      <div style={{ maxWidth: "920px", margin: "0 auto", padding: "2.5rem 2rem 4rem" }}>
+
+        <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
+          Publications
+        </h1>
+        <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+          Please check for the most up-to-date list:{" "}
+          <a href={googleScholar} target="_blank" rel="noopener noreferrer"
+            style={{ color: "var(--accent)", fontWeight: 500 }}>
+            Google Scholar ↗
+          </a>
+        </p>
+        <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "2rem" }} />
+
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          {list.map((pub) => (
+            <div key={pub.id} className="pub-item">
+              <p style={{ marginBottom: "0.3rem" }}>
+                <span style={{ color: "var(--accent)", fontWeight: 400, fontSize: "0.92rem", lineHeight: 1.5 }}>
+                  [{pub.id}] {pub.title}
+                </span>
+              </p>
+              <p style={{ fontSize: "0.84rem", color: "var(--text)", marginBottom: "0.2rem" }}>
+                {renderAuthors(pub.authors, pub.pi)}
+              </p>
+              <p style={{ fontSize: "0.84rem" }}>
+                <strong style={{ color: pub.venueColor || "var(--red)" }}>{pub.venue}</strong>
+                {pub.details && <span style={{ color: "var(--text-secondary)" }}>{" "}{pub.details}</span>}
+                {pub.note && (
+                  <span style={{ color: "var(--accent2)", marginLeft: "0.4rem", fontStyle: "italic" }}>
+                    {pub.note}
+                  </span>
+                )}
+                {pub.pdf && (
+                  <a href={pub.pdf} target="_blank" rel="noopener noreferrer"
+                    style={{ marginLeft: "0.5rem", color: pub.venueColor || "var(--red)", fontWeight: 600 }}>
+                    [pdf]
+                  </a>
+                )}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

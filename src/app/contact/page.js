@@ -1,18 +1,72 @@
-import labInfo from "../../../data/lab.json";
-
 export default function ContactPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-10">Contact</h1>
-      <div className="space-y-4 text-lg">
-        <p><strong>주소:</strong> {labInfo.address}</p>
-        <p><strong>이메일:</strong> <a href={`mailto:${labInfo.email}`} className="text-blue-600 hover:underline">{labInfo.email}</a></p>
-        <p><strong>전화:</strong> {labInfo.phone}</p>
+    <div style={{ maxWidth: "860px", margin: "0 auto", padding: "3rem 2rem" }}>
+
+      <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
+        Contact
+      </h1>
+      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+        Get in touch with BIRD Lab
+      </p>
+      <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "2rem" }} />
+
+      <div style={{ display: "flex", gap: "3rem", flexWrap: "wrap", alignItems: "flex-start" }}>
+
+        {/* Contact info */}
+        <div style={{
+          flex: 1, minWidth: "260px",
+          background: "var(--bg-alt)", border: "1px solid var(--border)",
+          borderRadius: "8px", padding: "1.8rem 2rem",
+        }}>
+          <h2 style={{ fontSize: "1.05rem", fontWeight: 700, marginBottom: "1rem", color: "var(--text)" }}>
+            Junghwan Byun, Ph.D
+          </h2>
+          <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 2.1 }}>
+            <p>Electronic and Hybrid Materials Research Center</p>
+            <p>Korea Institute of Science and Technology (KIST)</p>
+            <p>Laboratory Bldg L4, Rm L4345</p>
+            <p>5, Hwarang-ro 14-gil</p>
+            <p>Seongbuk-gu Seoul 02792</p>
+            <p>Republic of Korea</p>
+          </div>
+          <hr style={{ border: "none", borderTop: "1px solid var(--border)", margin: "1rem 0" }} />
+          <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 2 }}>
+            <p>
+              <strong style={{ color: "var(--text)" }}>Email:</strong>{" "}
+              <a href="mailto:junghwan@kist.re.kr" style={{ color: "var(--accent)" }}>
+                junghwan@kist.re.kr
+              </a>
+            </p>
+            <p>
+              <strong style={{ color: "var(--text)" }}>Phone:</strong> +82-2-958-5357
+            </p>
+          </div>
+        </div>
+
+        {/* Map */}
+        <div style={{ flex: 1, minWidth: "280px" }}>
+          <div style={{
+            borderRadius: "8px", overflow: "hidden",
+            border: "1px solid var(--border)",
+            boxShadow: "var(--shadow-sm)",
+          }}>
+            <iframe
+              title="KIST Location"
+              src="https://maps.google.com/maps?q=Korea+Institute+of+Science+and+Technology+KIST+Seoul&output=embed"
+              width="100%"
+              height="320"
+              style={{ border: "none", display: "block" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: "0.5rem", textAlign: "center" }}>
+            Hwarang-ro 14-gil 5, Seongbuk-gu, Seoul (02792)
+          </p>
+        </div>
+
       </div>
-      <div className="mt-10 p-6 bg-gray-50 rounded-lg">
-        <h2 className="text-xl font-semibold mb-2">대학원생 모집</h2>
-        <p className="text-gray-700">관심 있는 학생은 이메일로 연락 주세요.</p>
-      </div>
+
     </div>
   );
 }

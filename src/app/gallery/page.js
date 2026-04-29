@@ -1,27 +1,63 @@
-import gallery from "../../../data/gallery.json";
+import galleryData from "../../../data/gallery.json";
+import Carousel from "../../components/Carousel";
 
 export default function GalleryPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-10">Gallery</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {gallery.map((item) => (
-          <div key={item.id} className="border rounded-lg overflow-hidden hover:shadow-md transition">
-            {item.image && (
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
-            )}
-            <div className="p-4">
-              <p className="text-xs text-gray-400 mb-1">{item.date}</p>
-              <h2 className="font-semibold text-lg mb-1">{item.title}</h2>
-              <p className="text-sm text-gray-600">{item.description}</p>
+    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 2rem" }}>
+
+      <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
+        Gallery
+      </h1>
+      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+        Lab events, conferences, and memories
+      </p>
+      <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "2.5rem" }} />
+
+      {galleryData.map((yearGroup) => {
+        const eventsWithPhotos = yearGroup.events.filter((e) => e.photos && e.photos.length > 0);
+        if (eventsWithPhotos.length === 0) return null;
+
+        return (
+          <section key={yearGroup.year} style={{ marginBottom: "4rem" }}>
+            {/* Year badge */}
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
+              <span style={{
+                fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em",
+                color: "var(--accent)", background: "var(--accent-soft)",
+                padding: "4px 12px", borderRadius: "20px",
+                border: "1px solid var(--accent)",
+              }}>
+                {yearGroup.year}
+              </span>
+              <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
             </div>
-          </div>
-        ))}
-      </div>
+
+            {/* Events grid */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+              gap: "1.5rem",
+            }}>
+              {eventsWithPhotos.map((event) => (
+                <div key={event.id} className="gallery-card">
+                  {/* Carousel */}
+                  <Carousel photos={event.photos} caption={event.caption} />
+                  {/* Caption */}
+                  <div style={{ padding: "0.85rem 1rem" }}>
+                    <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text)", marginBottom: "0.2rem", lineHeight: 1.4 }}>
+                      {event.caption}
+                    </p>
+                    <p style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                      {event.date}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+
     </div>
   );
 }

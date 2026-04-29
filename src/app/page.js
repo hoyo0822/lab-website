@@ -1,41 +1,234 @@
-import labInfo from "../../data/lab.json";
-import news from "../../data/news.json";
+import lab from "../../data/lab.json";
+import pubData from "../../data/publications.json";
+import newsData from "../../data/news.json";
+import Image from "next/image";
 import Link from "next/link";
+import HeroSlideshow from "../components/HeroSlideshow";
+import CoverSlideshow from "../components/CoverSlideshow";
 
 export default function Home() {
-  const recentNews = news.slice(0, 3); // 최근 3개만
+  const recentNews = newsData.items.slice(0, 8);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16">
-      {/* Hero */}
-      <section className="mb-20">
-        <h1 className="text-5xl font-bold mb-4">{labInfo.name}</h1>
-        <p className="text-2xl text-gray-600 mb-6">{labInfo.tagline}</p>
-        <p className="text-lg text-gray-700 max-w-3xl leading-relaxed">
-          {labInfo.description}
+    <>
+      {/* ── HERO ── */}
+      <section style={{
+        width: "100%", minHeight: "520px", position: "relative",
+        display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
+      }}>
+        <HeroSlideshow slides={lab.heroSlides} />
+
+        {/* Overlay */}
+        <div style={{
+          position: "absolute", inset: 0, zIndex: 1,
+          background: "linear-gradient(160deg,rgba(0,0,0,0.60) 0%,rgba(0,0,0,0.38) 60%,rgba(43,87,154,0.35) 100%)",
+        }} />
+        <div style={{
+          position: "absolute", inset: 0, zIndex: 1,
+          backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px,transparent 1px)",
+          backgroundSize: "32px 32px",
+        }} />
+
+        {/* Text */}
+        <div style={{ position: "relative", zIndex: 2, textAlign: "center", color: "#fff", padding: "2rem 1.5rem", maxWidth: "860px" }}>
+          <h1 className="hero-title" style={{
+            fontSize: "clamp(1.8rem,4.5vw,3.2rem)", fontWeight: 300,
+            letterSpacing: "0.12em", lineHeight: 1.25, marginBottom: "0.9rem",
+            textShadow: "0 2px 18px rgba(0,0,0,0.4)",
+          }}>
+            <strong style={{ fontWeight: 800 }}>B</strong>IO-
+            <strong style={{ fontWeight: 800 }}>I</strong>NTERACTIVE{" "}
+            <strong style={{ fontWeight: 800 }}>R</strong>OBOT{" "}
+            <strong style={{ fontWeight: 800 }}>D</strong>ESIGN LAB
+          </h1>
+          <p className="hero-sub" style={{
+            fontSize: "clamp(0.88rem,1.8vw,1.05rem)", fontWeight: 300,
+            letterSpacing: "0.06em", opacity: 0.9, lineHeight: 1.55,
+            maxWidth: "620px", margin: "0 auto 1.8rem",
+          }}>
+            at Korea Institute of Science and Technology (KIST)
+          </p>
+          <div className="hero-btn" style={{ display: "flex", gap: "0.8rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/research" className="btn-primary" style={{
+              background: "rgba(255,255,255,0.15)", backdropFilter: "blur(8px)",
+              border: "1px solid rgba(255,255,255,0.45)",
+            }}>Our Research</Link>
+            <Link href="/people" className="btn-primary" style={{
+              background: "rgba(43,87,154,0.80)", border: "1px solid rgba(43,87,154,0.6)",
+            }}>Meet the Team</Link>
+          </div>
+        </div>
+
+        <div style={{
+          position: "absolute", bottom: "1.5rem", left: "50%", transform: "translateX(-50%)",
+          color: "rgba(255,255,255,0.55)", fontSize: "1.4rem", zIndex: 2,
+          animation: "fadeInUp 1.2s 1s ease both",
+        }}>↓</div>
+      </section>
+
+      {/* ── INTRO ── */}
+      <section style={{ maxWidth: "860px", margin: "0 auto", padding: "4rem 2rem 2rem" }}>
+        <p style={{ fontSize: "1.1rem", color: "var(--accent)", fontWeight: 500, lineHeight: 1.6, marginBottom: "1.2rem" }}>
+          {lab.title1}
+        </p>
+        <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.9 }}>
+          {lab.description1}
         </p>
       </section>
 
-      {/* 최근 뉴스 */}
-      <section>
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="text-3xl font-bold">Recent News</h2>
-          <Link href="/news" className="text-sm text-blue-600 hover:underline">
-            전체 보기 →
-          </Link>
+      {/* ── MEET THE TEAM ── */}
+      <section style={{ maxWidth: "860px", margin: "0 auto", padding: "1.5rem 2rem 3rem" }}>
+        <div style={{
+          background: "var(--bg-alt)", border: "1px solid var(--border)", borderRadius: "8px",
+          overflow: "hidden", display: "flex", alignItems: "stretch", flexWrap: "wrap",
+        }}>
+          {/* Photo */}
+          <div style={{
+            position: "relative",
+            width: "clamp(160px, 30%, 260px)",
+            minHeight: "180px",
+            flexShrink: 0,
+          }}>
+            <Image
+              src="/hero.jpg"
+              alt="BIRD Lab team"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+          </div>
+          {/* Text */}
+          <div style={{
+            flex: 1, minWidth: "220px",
+            padding: "1.8rem 2rem",
+            display: "flex", flexDirection: "column", justifyContent: "center",
+            gap: "0.8rem",
+          }}>
+            <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--text)" }}>
+              Meet the Team!
+            </h2>
+            <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
+              We are a group of scientists, researchers, and students interested in topics ranging
+              from metamaterials, soft electronics, soft robots, biomedical engineering, and AI.
+            </p>
+            <div>
+              <Link href="/people" className="btn-primary">Click Here →</Link>
+            </div>
+          </div>
         </div>
-        <ul className="space-y-4">
-          {recentNews.map((item) => (
-            <li key={item.id} className="border-b pb-4">
-              <div className="flex items-center gap-3 text-sm text-gray-500 mb-1">
-                <span>{item.date}</span>
-                <span className="px-2 py-0.5 bg-gray-100 rounded">{item.category}</span>
-              </div>
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-            </li>
-          ))}
-        </ul>
       </section>
-    </div>
+
+      {/* ── RESEARCH HIGHLIGHTS + RECENT NEWS ── */}
+      <section style={{ padding: "1rem 2rem 3rem" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "280px 1fr",
+            gap: "3rem",
+            alignItems: "start",
+          }}>
+
+            {/* LEFT: Cover slideshow */}
+            <div>
+              <h2 style={{
+                fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em",
+                color: "var(--text-muted)", textTransform: "uppercase",
+                marginBottom: "1.4rem",
+                paddingBottom: "0.5rem",
+                borderBottom: "1px solid var(--border)",
+              }}>
+                Research Highlights &amp; Updates
+              </h2>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <CoverSlideshow covers={pubData.covers} />
+              </div>
+              <div style={{ textAlign: "center", marginTop: "1.2rem" }}>
+                <Link href="/publications" style={{ fontSize: "0.82rem", color: "var(--accent)", fontWeight: 500 }}>
+                  View all publications →
+                </Link>
+              </div>
+            </div>
+
+            {/* RIGHT: Recent News */}
+            <div>
+              <h2 style={{
+                fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em",
+                color: "var(--text-muted)", textTransform: "uppercase",
+                marginBottom: "1.4rem",
+                paddingBottom: "0.5rem",
+                borderBottom: "1px solid var(--border)",
+              }}>
+                <span style={{ color: "var(--accent)", marginRight: "0.4rem" }}>●</span>
+                Recent News
+              </h2>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {recentNews.map((item) => (
+                  <li key={item.id} className="home-news-item">
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+              <div style={{ marginTop: "1.2rem" }}>
+                <Link href="/news" style={{ fontSize: "0.82rem", color: "var(--accent)", fontWeight: 500 }}>
+                  View all news →
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── JOIN OUR GROUP ── */}
+      <section style={{ maxWidth: "860px", margin: "0 auto", padding: "0 2rem 4rem" }}>
+        <Link href="/opportunities" style={{ display: "block", borderRadius: "8px", overflow: "hidden" }}>
+          <div style={{ position: "relative", width: "100%", height: "160px" }}>
+            <Image
+              src="/recruitment.png"
+              alt="Join our group"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+            <div style={{
+              position: "absolute", inset: 0,
+              background: "linear-gradient(135deg, rgba(0,0,0,0.50) 0%, rgba(43,87,154,0.40) 100%)",
+            }} />
+            <div style={{
+              position: "absolute", inset: 0,
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+              padding: "0 2rem", gap: "1rem",
+            }}>
+              <div>
+                <h2 style={{
+                  fontSize: "1.25rem", fontWeight: 700,
+                  color: "#fff", letterSpacing: "0.04em",
+                  textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                  marginBottom: "0.3rem",
+                }}>
+                  Join Our Group
+                </h2>
+                <p style={{ fontSize: "0.83rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>
+                  We are looking for motivated students and researchers.
+                </p>
+              </div>
+              <span style={{
+                flexShrink: 0,
+                padding: "0.45rem 1.3rem",
+                border: "1.5px solid rgba(255,255,255,0.75)",
+                borderRadius: "4px",
+                color: "#fff",
+                fontSize: "0.82rem",
+                fontWeight: 600,
+                letterSpacing: "0.05em",
+                backdropFilter: "blur(6px)",
+                background: "rgba(255,255,255,0.12)",
+                whiteSpace: "nowrap",
+              }}>
+                See Opportunities →
+              </span>
+            </div>
+          </div>
+        </Link>
+      </section>
+    </>
   );
 }
