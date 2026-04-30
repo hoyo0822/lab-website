@@ -40,7 +40,7 @@ export default function PublicationsPage() {
               height: "195px",
               overflow: "hidden",
             }} className="cover-item">
-              <Image src={cover.image} alt={cover.journal} fill style={{ objectFit: "cover" }} />
+              <Image src={cover.image} alt={cover.journal} fill sizes="130px" style={{ objectFit: "cover" }} />
             </div>
           ))}
         </div>

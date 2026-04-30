@@ -46,6 +46,7 @@ export default function HeroSlideshow({ slides = [] }) {
             src={src}
             alt={`Hero slide ${i + 1}`}
             fill
+            sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "center" }}
             priority={i === 0}
           />

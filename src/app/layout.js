@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <ThemeProvider>
 

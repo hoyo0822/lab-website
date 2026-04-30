@@ -26,7 +26,7 @@ export default function NewsPage() {
           {featured.map((item) => (
             <div key={item.id} className="news-card">
               <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10" }}>
-                <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
+                <Image src={item.image} alt={item.title} fill sizes="(max-width: 600px) 100vw, 33vw" style={{ objectFit: "cover" }} />
               </div>
               <div style={{ padding: "1.1rem 1.2rem" }}>
                 <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginBottom: "0.35rem", fontWeight: 600, letterSpacing: "0.04em" }}>

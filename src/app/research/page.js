@@ -34,6 +34,7 @@ export default function ResearchPage() {
               src={area.image}
               alt={area.title}
               fill
+              sizes="(max-width: 600px) 50vw, 25vw"
               className="research-area-img"
               style={{ objectFit: "cover" }}
             />

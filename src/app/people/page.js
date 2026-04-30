@@ -14,7 +14,7 @@ function MemberGrid({ members }) {
           <div className="member-photo" style={{
             position: "relative", width: "100%", aspectRatio: "3 / 4", marginBottom: "0.65rem",
           }}>
-            <Image src={m.photo} alt={m.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+            <Image src={m.photo} alt={m.name} fill sizes="(max-width: 600px) 50vw, 148px" style={{ objectFit: "cover", objectPosition: "center top" }} />
           </div>
           <p style={{ fontWeight: 600, fontSize: "0.84rem", color: "var(--text)", marginBottom: "0.15rem", lineHeight: 1.3 }}>
             {m.name}
@@ -69,7 +69,7 @@ export default function PeoplePage() {
         border: "1px solid var(--border)", padding: "2rem",
       }}>
         <div style={{ flexShrink: 0, position: "relative", width: "190px", height: "250px", borderRadius: "4px", overflow: "hidden" }}>
-          <Image src={pi.photo} alt={pi.name} fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+          <Image src={pi.photo} alt={pi.name} fill sizes="190px" style={{ objectFit: "cover", objectPosition: "center top" }} />
         </div>
         <div style={{ flex: 1, minWidth: "240px" }}>
           <div style={{

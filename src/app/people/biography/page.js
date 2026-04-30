@@ -91,7 +91,8 @@ export default function BiographyPage() {
             src="/people/pi-bio.jpg"
             alt="Junghwan Byun"
             fill
-            style={{ objectFit: "cover", objectPosition: "top" }}
+              sizes="(max-width: 600px) 100vw, 200px"
+              style={{ objectFit: "cover", objectPosition: "top" }}
           />
         </div>
 

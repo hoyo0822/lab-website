@@ -5,28 +5,28 @@
     {
       "id": 1,
       "title": "Soft robot",
-      "image": "/research/soft-robot.jpg",
+      "image": "/research/soft-robot.png",
       "color": "#2c3e50",
       "link": "/research/soft-robot"
     },
     {
       "id": 2,
       "title": "Robotic skin",
-      "image": "/research/robotic-skin.jpg",
+      "image": "/research/robotic-skin.png",
       "color": "#34495e",
       "link": "/research/robotic-skin"
     },
     {
       "id": 3,
       "title": "Metamaterials",
-      "image": "/research/metamaterials.jpg",
+      "image": "/research/metamaterials.png",
       "color": "#1a252f",
       "link": "/research/metamaterials"
     },
     {
       "id": 4,
       "title": "Biomedical microrobots",
-      "image": "/research/biomedical-microrobots.jpg",
+      "image": "/research/microrobots.png",
       "color": "#2c1a10",
       "link": "/research/microrobots"
     }

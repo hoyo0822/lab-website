@@ -1,0 +1,123 @@
+'use client';
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
+export default function IntroOverlay() {
+  // phase: 'show' → 'fade' → 'gone'
+  const [phase, setPhase] = useState('show');
+
+  useEffect(() => {
+    // Only show once per session
+    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('bird-intro-shown')) {
+      setPhase('gone');
+      return;
+    }
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem('bird-intro-shown', '1');
+    }
+
+    // hold 1.6s → fade out 0.9s → remove
+    const t1 = setTimeout(() => setPhase('fade'), 1600);
+    const t2 = setTimeout(() => setPhase('gone'), 2600);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, []);
+
+  if (phase === 'gone') return null;
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 9999,
+        background: 'linear-gradient(160deg, #060c1a 0%, #0d1b3e 60%, #0a1628 100%)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        opacity: phase === 'fade' ? 0 : 1,
+        transition: 'opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1)',
+        pointerEvents: 'none',
+        userSelect: 'none',
+      }}
+    >
+      {/* Subtle dot grid overlay */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)',
+        backgroundSize: '32px 32px',
+      }} />
+
+      {/* Content */}
+      <div style={{
+        position: 'relative',
+        textAlign: 'center',
+        color: '#fff',
+        padding: '2rem',
+        animation: 'introIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both',
+      }}>
+        {/* Logo */}
+        <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+          <Image
+            src="/lab-logo1.png"
+            alt="BIRD Lab"
+            width={240}
+            height={78}
+            priority
+            style={{
+              objectFit: 'contain',
+              width: 'auto',
+              height: '70px',
+              filter: 'brightness(0) invert(1)',
+            }}
+          />
+        </div>
+
+        {/* Lab name */}
+        <h1 style={{
+          fontSize: 'clamp(1rem, 3.5vw, 1.8rem)',
+          fontWeight: 300,
+          letterSpacing: '0.22em',
+          lineHeight: 1.4,
+          marginBottom: '0.7rem',
+          textTransform: 'uppercase',
+        }}>
+          <strong style={{ fontWeight: 800 }}>B</strong>io-
+          <strong style={{ fontWeight: 800 }}>I</strong>nteractive{' '}
+          <strong style={{ fontWeight: 800 }}>R</strong>obot{' '}
+          <strong style={{ fontWeight: 800 }}>D</strong>esign Lab
+        </h1>
+
+        <p style={{
+          fontSize: 'clamp(0.72rem, 1.5vw, 0.88rem)',
+          opacity: 0.55,
+          letterSpacing: '0.1em',
+          fontWeight: 300,
+        }}>
+          Korea Institute of Science and Technology
+        </p>
+
+        {/* Thin accent line */}
+        <div style={{
+          width: '40px',
+          height: '2px',
+          background: 'rgba(43,87,154,0.9)',
+          margin: '1.5rem auto 0',
+          borderRadius: '2px',
+          animation: 'introLine 0.6s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both',
+        }} />
+      </div>
+
+      <style>{`
+        @keyframes introIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0);    }
+        }
+        @keyframes introLine {
+          from { transform: scaleX(0); }
+          to   { transform: scaleX(1); }
+        }
+      `}</style>
+    </div>
+  );
+}

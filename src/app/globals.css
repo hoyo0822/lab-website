@@ -452,14 +452,13 @@ hr.divider, .divider {
 /* ─── Selection ──────────────────────────────────────────── */
 ::selection { background: var(--accent-soft); color: var(--accent); }
 
-/* ─── Utility ────────────────────────────────────────────── */
-.text-accent   { color: var(--accent); }
-.text-accent2  { color: var(--accent2); }
-.text-muted    { color: var(--text-muted); }
-.text-secondary{ color: var(--text-secondary); }
-.bg-surface    { background: var(--surface); }
-.bg-alt        { background: var(--bg-alt); }
-.border-std    { border: 1px solid var(--border); }
+/* ─── Home highlights grid ───────────────────────────────── */
+.home-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
 
 /* ─── Mobile / Responsive ────────────────────────────────── */
 
@@ -602,6 +601,18 @@ hr.divider, .divider {
   align-items: flex-start;
   margin-bottom: 3rem;
   flex-wrap: wrap;
+}
+
+/* ─── Scroll Reveal ───────────────────────────────────── */
+.sr-hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* General mobile padding reduction */

@@ -13,8 +13,8 @@ export default function CoverSlideshow({ covers }) {
       setTimeout(() => {
         setCurrent((prev) => (prev + 1) % covers.length);
         setVisible(true);
-      }, 400);
-    }, 3000);
+      }, 700);
+    }, 5000);
     return () => clearInterval(timer);
   }, [covers]);
 
@@ -26,20 +26,21 @@ export default function CoverSlideshow({ covers }) {
       {/* Main image */}
       <div style={{
         position: "relative",
-        width: "100%",
-        height: "240px",
+        width: "400px",
+        height: "300px",
         borderRadius: "6px",
         overflow: "hidden",
         boxShadow: "var(--shadow-lg)",
         background: "var(--bg-alt)",
         opacity: visible ? 1 : 0,
         transform: visible ? "scale(1)" : "scale(0.97)",
-        transition: "opacity 0.4s ease, transform 0.4s ease",
+        transition: "opacity 0.8s ease, transform 0.8s ease",
       }}>
         <Image
           src={cover.image}
           alt={cover.journal}
           fill
+          sizes="(max-width: 820px) 100vw, 400px"
           style={{ objectFit: "contain", padding: "8px" }}
         />
       </div>

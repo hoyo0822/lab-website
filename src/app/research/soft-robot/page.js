@@ -47,7 +47,7 @@ export default function SoftRobotPage() {
             overflow: "hidden",
             border: "1px solid var(--border)",
           }}>
-            <Image src={src} alt={`Soft robot ${i + 1}`} fill style={{ objectFit: "cover" }} />
+            <Image src={src} alt={`Soft robot ${i + 1}`} fill sizes="(max-width: 600px) 100vw, 50vw" style={{ objectFit: "cover" }} />
           </div>
         ))}
       </div>
