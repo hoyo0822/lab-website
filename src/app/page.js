@@ -177,7 +177,7 @@ export default function Home() {
           <Link href="/opportunities" style={{ display: "block", borderRadius: "8px", overflow: "hidden" }}>
             <div style={{ position: "relative", width: "100%", height: "160px" }}>
               <Image
-                src="/recruitment.png"
+                src="/recruitment.jpg"
                 alt="Join our group"
                 fill
                 sizes="(max-width: 860px) 100vw, 860px"
