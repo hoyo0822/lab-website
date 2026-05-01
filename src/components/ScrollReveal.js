@@ -12,12 +12,10 @@ export default function ScrollReveal({ children, delay = 0, style = {} }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Scrolling down → appear
           timerRef.current = setTimeout(() => {
             el.classList.add("sr-visible");
           }, delay);
         } else {
-          // Scrolling back up → disappear
           clearTimeout(timerRef.current);
           el.classList.remove("sr-visible");
         }

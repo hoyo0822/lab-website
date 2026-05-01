@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function MembersGrid({ members }) {
   const [selected, setSelected] = useState(null);
 
-  // Close on Escape key
   useEffect(() => {
     if (!selected) return;
     const onKey = (e) => { if (e.key === "Escape") setSelected(null); };
@@ -13,7 +12,6 @@ export default function MembersGrid({ members }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [selected]);
 
-  // Prevent body scroll when modal open
   useEffect(() => {
     document.body.style.overflow = selected ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -65,7 +63,6 @@ export default function MembersGrid({ members }) {
         ))}
       </div>
 
-      {/* ── Modal ── */}
       {selected && (
         <div
           onClick={() => setSelected(null)}
@@ -92,7 +89,6 @@ export default function MembersGrid({ members }) {
               animation: "fadeInUp 0.22s cubic-bezier(0.22,1,0.36,1)",
             }}
           >
-            {/* Top: photo + name */}
             <div style={{
               display: "flex", gap: "1.5rem", alignItems: "flex-start",
               padding: "1.8rem 1.8rem 1.4rem",
@@ -129,16 +125,13 @@ export default function MembersGrid({ members }) {
                   {selected.role}
                 </p>
                 {selected.email && (
-                  <a href={`mailto:${selected.email}`} style={{
-                    fontSize: "0.82rem", color: "var(--accent)", wordBreak: "break-all",
-                  }}>
-                    ✉ {selected.email}
+                  <a href={"mailto:" + selected.email} style={{ fontSize: "0.82rem", color: "var(--accent)", wordBreak: "break-all" }}>
+                    {String.fromCharCode(10003)} {selected.email}
                   </a>
                 )}
               </div>
             </div>
 
-            {/* Body: details */}
             <div style={{ padding: "1.4rem 1.8rem 1.8rem" }}>
               {selected.education && (
                 <DetailRow label="Education" value={selected.education} />
@@ -147,13 +140,9 @@ export default function MembersGrid({ members }) {
                 <DetailRow label="Research Interests" value={selected.researchInterests} />
               )}
               {selected.bio && (
-                <div style={{ marginTop: selected.education || selected.researchInterests ? "1rem" : 0 }}>
-                  <p style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.35rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                    About
-                  </p>
-                  <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.75 }}>
-                    {selected.bio}
-                  </p>
+                <div style={{ marginTop: (selected.education || selected.researchInterests) ? "1rem" : 0 }}>
+                  <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.35rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>About</p>
+                  <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.75 }}>{selected.bio}</p>
                 </div>
               )}
               {!selected.education && !selected.researchInterests && !selected.bio && (
@@ -163,7 +152,6 @@ export default function MembersGrid({ members }) {
               )}
             </div>
 
-            {/* Close button */}
             <button
               onClick={() => setSelected(null)}
               style={{
@@ -171,14 +159,11 @@ export default function MembersGrid({ members }) {
                 background: "var(--bg-alt)", border: "1px solid var(--border)",
                 borderRadius: "50%", width: "30px", height: "30px",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "1rem", color: "var(--text-muted)", cursor: "pointer",
-                transition: "background 0.2s, color 0.2s",
+                fontSize: "1.1rem", color: "var(--text-muted)", cursor: "pointer",
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = "var(--accent-soft)"; e.currentTarget.style.color = "var(--accent)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "var(--bg-alt)"; e.currentTarget.style.color = "var(--text-muted)"; }}
               aria-label="Close"
             >
-              ×
+              &times;
             </button>
           </div>
         </div>

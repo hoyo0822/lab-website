@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
                 <p>
                   <strong>Tel:</strong> {lab.phone}&nbsp;&nbsp;|&nbsp;&nbsp;
                   <strong>E-mail:</strong>{" "}
-                  <a href={`mailto:${lab.email}`} style={{ color: "var(--accent)" }}>{lab.email}</a>
+                  <a href={"mailto:" + lab.email} style={{ color: "var(--accent)" }}>{lab.email}</a>
                 </p>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
               </div>
             </div>
             <div style={{ textAlign: "center", fontSize: "0.74rem", color: "var(--text-muted)", marginTop: "1.2rem" }}>
-              ©{new Date().getFullYear()} {lab.copyright}. All rights reserved.
+              {"©"}{new Date().getFullYear()} {lab.copyright}. All rights reserved.
             </div>
           </footer>
 

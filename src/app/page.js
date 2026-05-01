@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <>
       <IntroOverlay />
-      {/* ── HERO (항상 표시) ── */}
+
+      {/* ── HERO ── */}
       <section style={{
         width: "100%", minHeight: "520px", position: "relative",
         display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden",
       }}>
         <HeroSlideshow slides={lab.heroSlides} />
-
         <div style={{
           position: "absolute", inset: 0, zIndex: 1,
           background: "linear-gradient(160deg,rgba(0,0,0,0.60) 0%,rgba(0,0,0,0.38) 60%,rgba(43,87,154,0.35) 100%)",
@@ -30,7 +30,6 @@ export default function Home() {
           backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px,transparent 1px)",
           backgroundSize: "32px 32px",
         }} />
-
         <div style={{ position: "relative", zIndex: 2, textAlign: "center", color: "#fff", padding: "2rem 1.5rem", maxWidth: "860px" }}>
           <h1 className="hero-title" style={{
             fontSize: "clamp(1.8rem,4.5vw,3.2rem)", fontWeight: 300,
@@ -59,7 +58,6 @@ export default function Home() {
             }}>Meet the Team</Link>
           </div>
         </div>
-
         <div style={{
           position: "absolute", bottom: "1.5rem", left: "50%", transform: "translateX(-50%)",
           color: "rgba(255,255,255,0.55)", fontSize: "1.4rem", zIndex: 2,
@@ -96,14 +94,10 @@ export default function Home() {
               />
             </div>
             <div style={{
-              flex: 1, minWidth: "220px",
-              padding: "1.8rem 2rem",
-              display: "flex", flexDirection: "column", justifyContent: "center",
-              gap: "0.8rem",
+              flex: 1, minWidth: "220px", padding: "1.8rem 2rem",
+              display: "flex", flexDirection: "column", justifyContent: "center", gap: "0.8rem",
             }}>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--text)" }}>
-                Meet the Team!
-              </h2>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--text)" }}>Meet the Team!</h2>
               <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
                 We are a group of scientists, researchers, and students interested in topics ranging
                 from metamaterials, soft electronics, soft robots, biomedical engineering, and AI.
@@ -116,13 +110,13 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* ── RESEARCH HIGHLIGHTS + RECENT NEWS ── */}
+      {/* ── RESEARCH HIGHLIGHTS + RECENT NEWS + JOIN OUR GROUP ── */}
       <ScrollReveal delay={400}>
-        <section style={{ padding: "1rem 2rem 3rem" }}>
+        <section style={{ padding: "1rem 2rem 4rem" }}>
           <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
             <div className="home-highlights-grid">
 
-              {/* LEFT: Cover slideshow */}
+              {/* LEFT: Research Highlights */}
               <div>
                 <h2 style={{
                   fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em",
@@ -169,7 +163,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Join Our Group — same width as right column, pinned to bottom */}
+                {/* Join Our Group */}
                 <div style={{ marginTop: "1.8rem", flexShrink: 0 }}>
                   <Link href="/opportunities" style={{ display: "block", borderRadius: "8px", overflow: "hidden" }}>
                     <div style={{ position: "relative", width: "100%", height: "130px" }}>
@@ -187,29 +181,20 @@ export default function Home() {
                       <div className="join-group-inner">
                         <div>
                           <h2 style={{
-                            fontSize: "1.1rem", fontWeight: 700,
-                            color: "#fff", letterSpacing: "0.04em",
-                            textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                            fontSize: "1.1rem", fontWeight: 700, color: "#fff",
+                            letterSpacing: "0.04em", textShadow: "0 2px 8px rgba(0,0,0,0.4)",
                             marginBottom: "0.2rem",
-                          }}>
-                            Join Our Group
-                          </h2>
+                          }}>Join Our Group</h2>
                           <p style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.4 }}>
                             We are looking for motivated students and researchers.
                           </p>
                         </div>
                         <span style={{
-                          flexShrink: 0,
-                          padding: "0.4rem 1.1rem",
-                          border: "1.5px solid rgba(255,255,255,0.75)",
-                          borderRadius: "4px",
-                          color: "#fff",
-                          fontSize: "0.78rem",
-                          fontWeight: 600,
-                          letterSpacing: "0.05em",
-                          backdropFilter: "blur(6px)",
-                          background: "rgba(255,255,255,0.12)",
-                          whiteSpace: "nowrap",
+                          flexShrink: 0, padding: "0.4rem 1.1rem",
+                          border: "1.5px solid rgba(255,255,255,0.75)", borderRadius: "4px",
+                          color: "#fff", fontSize: "0.78rem", fontWeight: 600,
+                          letterSpacing: "0.05em", backdropFilter: "blur(6px)",
+                          background: "rgba(255,255,255,0.12)", whiteSpace: "nowrap",
                         }}>
                           See Opportunities →
                         </span>
@@ -219,7 +204,6 @@ export default function Home() {
                 </div>
 
               </div>
-
             </div>
           </div>
         </section>

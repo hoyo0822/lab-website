@@ -617,4 +617,5 @@ hr.divider, .divider {
 
 /* General mobile padding reduction */
 @media (max-width: 640px) {
-  .mobile-pad {
+  .mobile-pad {    padding-left: 1rem !important; padding-right: 1rem !important; }
+}
