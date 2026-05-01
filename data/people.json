@@ -21,70 +21,110 @@
       "name": "Sejin Choi, M.D.",
       "role": "Visiting Scientist",
       "category": "postdoc",
-      "photo": "/people/choi-sejin.png"
+      "photo": "/people/choi-sejin.png",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "ko-junghyeon",
       "name": "Junghyeon Ko, Ph.D.",
       "role": "Postdoctoral Associate",
       "category": "postdoc",
-      "photo": "/people/ko-junghyeon.jpg"
+      "photo": "/people/ko-junghyeon.jpg",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "yu-sungyol",
       "name": "Sung Yol Yu, Ph.D.",
       "role": "Postdoctoral Associate",
       "category": "postdoc",
-      "photo": "/people/yu-sungyol.png"
+      "photo": "/people/yu-sungyol.png",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "kang-wonkyeong",
       "name": "Wonkyeong Kang",
       "role": "Graduate Student",
       "category": "phd",
-      "photo": "/people/kang-wonkyeong.png"
+      "photo": "/people/kang-wonkyeong.png",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "jung-hoyoung",
       "name": "Hoyoung Jung",
       "role": "Graduate Student",
       "category": "phd",
-      "photo": "/people/jung-hoyoung.jpg"
+      "photo": "/people/jung-hoyoung.jpg",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "choi-jaeyoung",
       "name": "Jaeyoung Choi",
       "role": "Graduate Student",
       "category": "phd",
-      "photo": "/people/choi-jaeyoung.jpg"
+      "photo": "/people/choi-jaeyoung.jpg",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "lim-seungwon",
       "name": "Seungwon Lim",
       "role": "Graduate Student",
       "category": "phd",
-      "photo": "/people/lim-seungwon.jpg"
+      "photo": "/people/lim-seungwon.jpg",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "hong-hyunjin",
       "name": "Hyunjin Hong",
       "role": "Graduate Student",
       "category": "phd",
-      "photo": "/people/hong-hyunjin.jpeg"
+      "photo": "/people/hong-hyunjin.jpeg",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "jung-jino",
       "name": "Jino Jung",
       "role": "Undergraduate Intern",
       "category": "intern",
-      "photo": "/people/jung-jino.png"
+      "photo": "/people/jung-jino.png",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     },
     {
       "id": "park-boae",
       "name": "Boae Park",
       "role": "Undergraduate Intern",
       "category": "intern",
-      "photo": "/people/park-boae.png"
+      "photo": "/people/park-boae.png",
+      "email": "",
+      "education": "",
+      "researchInterests": "",
+      "bio": ""
     }
   ],
   "alumni": [

@@ -141,84 +141,87 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* RIGHT: Recent News */}
-              <div>
-                <h2 style={{
-                  fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em",
-                  color: "var(--text-muted)", textTransform: "uppercase",
-                  marginBottom: "1.4rem", paddingBottom: "0.5rem",
-                  borderBottom: "1px solid var(--border)",
-                }}>
-                  <span style={{ color: "var(--accent)", marginRight: "0.4rem" }}>●</span>
-                  Recent News
-                </h2>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {recentNews.map((item) => (
-                    <li key={item.id} className="home-news-item">
-                      {item.text}
-                    </li>
-                  ))}
-                </ul>
-                <div style={{ marginTop: "1.2rem" }}>
-                  <Link href="/news" style={{ fontSize: "0.82rem", color: "var(--accent)", fontWeight: 500 }}>
-                    View all news →
+              {/* RIGHT: Recent News + Join Our Group */}
+              <div style={{ display: "flex", flexDirection: "column" }}>
+
+                {/* News */}
+                <div style={{ flex: 1 }}>
+                  <h2 style={{
+                    fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em",
+                    color: "var(--text-muted)", textTransform: "uppercase",
+                    marginBottom: "1.4rem", paddingBottom: "0.5rem",
+                    borderBottom: "1px solid var(--border)",
+                  }}>
+                    <span style={{ color: "var(--accent)", marginRight: "0.4rem" }}>●</span>
+                    Recent News
+                  </h2>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    {recentNews.map((item) => (
+                      <li key={item.id} className="home-news-item">
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                  <div style={{ marginTop: "1.2rem" }}>
+                    <Link href="/news" style={{ fontSize: "0.82rem", color: "var(--accent)", fontWeight: 500 }}>
+                      View all news →
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Join Our Group — same width as right column, pinned to bottom */}
+                <div style={{ marginTop: "1.8rem", flexShrink: 0 }}>
+                  <Link href="/opportunities" style={{ display: "block", borderRadius: "8px", overflow: "hidden" }}>
+                    <div style={{ position: "relative", width: "100%", height: "130px" }}>
+                      <Image
+                        src="/recruitment.jpg"
+                        alt="Join our group"
+                        fill
+                        sizes="(max-width: 820px) 100vw, 50vw"
+                        style={{ objectFit: "cover", objectPosition: "center" }}
+                      />
+                      <div style={{
+                        position: "absolute", inset: 0,
+                        background: "linear-gradient(135deg, rgba(0,0,0,0.52) 0%, rgba(43,87,154,0.42) 100%)",
+                      }} />
+                      <div className="join-group-inner">
+                        <div>
+                          <h2 style={{
+                            fontSize: "1.1rem", fontWeight: 700,
+                            color: "#fff", letterSpacing: "0.04em",
+                            textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+                            marginBottom: "0.2rem",
+                          }}>
+                            Join Our Group
+                          </h2>
+                          <p style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.4 }}>
+                            We are looking for motivated students and researchers.
+                          </p>
+                        </div>
+                        <span style={{
+                          flexShrink: 0,
+                          padding: "0.4rem 1.1rem",
+                          border: "1.5px solid rgba(255,255,255,0.75)",
+                          borderRadius: "4px",
+                          color: "#fff",
+                          fontSize: "0.78rem",
+                          fontWeight: 600,
+                          letterSpacing: "0.05em",
+                          backdropFilter: "blur(6px)",
+                          background: "rgba(255,255,255,0.12)",
+                          whiteSpace: "nowrap",
+                        }}>
+                          See Opportunities →
+                        </span>
+                      </div>
+                    </div>
                   </Link>
                 </div>
+
               </div>
 
             </div>
           </div>
-        </section>
-      </ScrollReveal>
-
-      {/* ── JOIN OUR GROUP ── */}
-      <ScrollReveal delay={600}>
-        <section style={{ maxWidth: "860px", margin: "0 auto", padding: "0 2rem 4rem" }}>
-          <Link href="/opportunities" style={{ display: "block", borderRadius: "8px", overflow: "hidden" }}>
-            <div style={{ position: "relative", width: "100%", height: "160px" }}>
-              <Image
-                src="/recruitment.jpg"
-                alt="Join our group"
-                fill
-                sizes="(max-width: 860px) 100vw, 860px"
-                style={{ objectFit: "cover", objectPosition: "center" }}
-              />
-              <div style={{
-                position: "absolute", inset: 0,
-                background: "linear-gradient(135deg, rgba(0,0,0,0.50) 0%, rgba(43,87,154,0.40) 100%)",
-              }} />
-              <div className="join-group-inner">
-                <div>
-                  <h2 style={{
-                    fontSize: "1.25rem", fontWeight: 700,
-                    color: "#fff", letterSpacing: "0.04em",
-                    textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-                    marginBottom: "0.3rem",
-                  }}>
-                    Join Our Group
-                  </h2>
-                  <p style={{ fontSize: "0.83rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.5 }}>
-                    We are looking for motivated students and researchers.
-                  </p>
-                </div>
-                <span style={{
-                  flexShrink: 0,
-                  padding: "0.45rem 1.3rem",
-                  border: "1.5px solid rgba(255,255,255,0.75)",
-                  borderRadius: "4px",
-                  color: "#fff",
-                  fontSize: "0.82rem",
-                  fontWeight: 600,
-                  letterSpacing: "0.05em",
-                  backdropFilter: "blur(6px)",
-                  background: "rgba(255,255,255,0.12)",
-                  whiteSpace: "nowrap",
-                }}>
-                  See Opportunities →
-                </span>
-              </div>
-            </div>
-          </Link>
         </section>
       </ScrollReveal>
     </>

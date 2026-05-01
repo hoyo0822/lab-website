@@ -39,17 +39,6 @@ export default function ResearchPage() {
               style={{ objectFit: "cover" }}
             />
             <div className="research-area-overlay" />
-            <div style={{
-              position: "absolute", bottom: 0, left: 0, right: 0,
-              background: "linear-gradient(transparent, rgba(0,0,0,0.65))",
-              color: "#fff", textAlign: "center",
-              padding: "1.2rem 0.5rem 0.6rem",
-              fontSize: "0.82rem", fontWeight: 600,
-              letterSpacing: "0.03em",
-              zIndex: 2,
-            }}>
-              {area.title}
-            </div>
           </Link>
         ))}
       </div>

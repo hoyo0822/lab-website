@@ -1,32 +1,7 @@
 import data from "../../../data/people.json";
 import Image from "next/image";
 import Link from "next/link";
-
-function MemberGrid({ members }) {
-  return (
-    <div style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(148px, 1fr))",
-      gap: "1.6rem",
-    }}>
-      {members.map((m) => (
-        <div key={m.id} style={{ textAlign: "center" }}>
-          <div className="member-photo" style={{
-            position: "relative", width: "100%", aspectRatio: "3 / 4", marginBottom: "0.65rem",
-          }}>
-            <Image src={m.photo} alt={m.name} fill sizes="(max-width: 600px) 50vw, 148px" style={{ objectFit: "cover", objectPosition: "center top" }} />
-          </div>
-          <p style={{ fontWeight: 600, fontSize: "0.84rem", color: "var(--text)", marginBottom: "0.15rem", lineHeight: 1.3 }}>
-            {m.name}
-          </p>
-          <p style={{ fontSize: "0.76rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-            {m.role}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-}
+import MembersGrid from "../../components/MembersGrid";
 
 function SubSection({ title, members }) {
   if (!members || members.length === 0) return null;
@@ -40,7 +15,7 @@ function SubSection({ title, members }) {
       }}>
         {title}
       </h3>
-      <MemberGrid members={members} />
+      <MembersGrid members={members} />
     </div>
   );
 }
