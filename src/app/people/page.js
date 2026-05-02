@@ -75,11 +75,11 @@ export default function PeoplePage() {
           </div>
           <div style={{ marginTop: "1.1rem", display: "flex", gap: "1rem" }}>
             <Link href={pi.biography}
-              style={{ fontSize: "0.85rem", color: "var(--accent2)", fontWeight: 500 }}>
-              Biography →
+              style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 500 }}>
+              Biography ↗
             </Link>
             <a href={pi.googleScholar} target="_blank" rel="noopener noreferrer"
-              style={{ fontSize: "0.85rem", color: "var(--accent2)", fontWeight: 500 }}>
+              style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 500 }}>
               Google Scholar ↗
             </a>
           </div>
@@ -111,16 +111,21 @@ export default function PeoplePage() {
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {alumni.map((a, i) => (
               <li key={a.id} style={{
-                fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.9,
-                padding: "0.5rem 0",
+                fontSize: "0.88rem", color: "var(--text-secondary)",
+                padding: "0.6rem 0",
                 borderBottom: i < alumni.length - 1 ? "1px solid var(--border)" : "none",
               }}>
-                <span style={{ fontWeight: 600, color: "var(--text)" }}>{a.name}</span>
-                <span style={{ marginLeft: "0.6rem", color: "var(--text-muted)" }}>— {a.period}</span>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem 0.6rem", alignItems: "baseline", marginBottom: a.current ? "0.25rem" : 0 }}>
+                  <span style={{ fontWeight: 600, color: "var(--text)" }}>{a.name}</span>
+                  <span style={{ color: "var(--text-muted)", fontSize: "0.83rem" }}>— {a.period}</span>
+                </div>
                 {a.current && (
-                  <span style={{ color: "var(--text-secondary)" }}>
-                    {" "}| Current: {a.current}
-                  </span>
+                  <p style={{ fontSize: "0.84rem", color: "var(--text-secondary)", lineHeight: 1.65, paddingLeft: "0.1rem" }}>
+                    <span style={{ fontWeight: 500, color: "var(--text-muted)" }}>Current position: </span>
+                    {a.current.split("\n").map((line, i, arr) => (
+                      <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                    ))}
+                  </p>
                 )}
               </li>
             ))}

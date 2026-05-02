@@ -73,16 +73,16 @@ export default function PublicationsPage() {
                 {renderAuthors(pub.authors, pub.pi)}
               </p>
               <p style={{ fontSize: "0.84rem" }}>
-                <strong style={{ color: pub.venueColor || "var(--red)" }}>{pub.venue}</strong>
-                {pub.details && <span style={{ color: "var(--text-secondary)" }}>{" "}{pub.details}</span>}
+                <strong style={{ color: pub.venueColor || "var(--red)", fontWeight: 700 }}>{pub.venue}</strong>
+                {pub.details && <span style={{ color: "var(--text-muted)", fontWeight: 300 }}>{" "}{pub.details}</span>}
                 {pub.note && (
-                  <span style={{ color: "var(--accent2)", marginLeft: "0.4rem", fontStyle: "italic" }}>
+                  <span style={{ color: "var(--text-secondary)", marginLeft: "0.4rem", fontStyle: "italic", fontWeight: 300 }}>
                     {pub.note}
                   </span>
                 )}
                 {pub.pdf && (
                   <a href={pub.pdf} target="_blank" rel="noopener noreferrer"
-                    style={{ marginLeft: "0.5rem", color: pub.venueColor || "var(--red)", fontWeight: 600 }}>
+                    style={{ marginLeft: "0.5rem", color: "var(--accent2)", fontWeight: 500 }}>
                     [pdf]
                   </a>
                 )}

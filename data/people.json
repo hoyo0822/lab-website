@@ -13,7 +13,7 @@
     "address2": "Seoul 02792, Republic of Korea",
     "photo": "/people/pi.jpg",
     "biography": "/people/biography",
-    "googleScholar": "https://scholar.google.com/citations?user=EXAMPLE"
+    "googleScholar": "https://scholar.google.com/citations?user=zmpMhKgAAAAJ&hl=en"
   },
   "members": [
     {
@@ -22,8 +22,9 @@
       "role": "Visiting Scientist",
       "category": "postdoc",
       "photo": "/people/choi-sejin.png",
-      "email": "",
-      "education": "",
+      "email": "sj.peter.choi@gmail.com",
+      "tagline": "From SNU hospital",
+      "education": "M.D. M.S. College of Medicine, Seoul National University\nB.S. Electrical & Computer Engineering, Seoul National University",
       "researchInterests": "",
       "bio": ""
     },
@@ -33,9 +34,10 @@
       "role": "Postdoctoral Associate",
       "category": "postdoc",
       "photo": "/people/ko-junghyeon.jpg",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "kojh1782@kist.re.kr",
+      "tagline": "",
+      "education": "Ph.D. Chemical & Biological Engineering, Seoul National University\nB.S. Materials Science & Engineering, Seoul National University",
+      "researchInterests": "Tissue regeneration / Micro-robots",
       "bio": ""
     },
     {
@@ -44,9 +46,10 @@
       "role": "Postdoctoral Associate",
       "category": "postdoc",
       "photo": "/people/yu-sungyol.png",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "sungyol@kist.re.kr",
+      "tagline": "",
+      "education": "Ph.D. Mechanical Engineering, Seoul National University\nB.S. Mechanical Engineering, University of Waterloo",
+      "researchInterests": "Soft robots",
       "bio": ""
     },
     {
@@ -55,9 +58,10 @@
       "role": "Graduate Student",
       "category": "phd",
       "photo": "/people/kang-wonkyeong.png",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "t24293@kist.re.kr",
+      "tagline": "",
+      "education": "M.S/Ph.D Integrated Course, Mechanical Engineering, Seoul National University\nB.S. Mechanical Engineering, Seoul National University",
+      "researchInterests": "Soft robots",
       "bio": ""
     },
     {
@@ -66,9 +70,10 @@
       "role": "Graduate Student",
       "category": "phd",
       "photo": "/people/jung-hoyoung.jpg",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "hoyoung@kist.re.kr",
+      "tagline": "",
+      "education": "M.S/Ph.D Integrated Course, Materials Science & Engineering, Seoul National University\nB.S. Materials Science & Engineering, Hanyang University",
+      "researchInterests": "Mechanical metamaterials / Robotic skin",
       "bio": ""
     },
     {
@@ -77,9 +82,10 @@
       "role": "Graduate Student",
       "category": "phd",
       "photo": "/people/choi-jaeyoung.jpg",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "t25609@kist.re.kr",
+      "tagline": "",
+      "education": "M.S/Ph.D Integrated Course, Bioengineering, Seoul National University\nB.S. Chemical Engineering, Kyung Hee University",
+      "researchInterests": "Micro-robots",
       "bio": ""
     },
     {
@@ -88,9 +94,10 @@
       "role": "Graduate Student",
       "category": "phd",
       "photo": "/people/lim-seungwon.jpg",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "seungwon@kist.re.kr",
+      "tagline": "",
+      "education": "M.S/Ph.D Integrated Course, Materials Science & Engineering, Seoul National University\nB.S. Mechanical & Biomedical Engineering, Ewha Womans University",
+      "researchInterests": "Mechanical metamaterials / HASEL",
       "bio": ""
     },
     {
@@ -99,9 +106,10 @@
       "role": "Graduate Student",
       "category": "phd",
       "photo": "/people/hong-hyunjin.jpeg",
-      "email": "",
-      "education": "",
-      "researchInterests": "",
+      "email": "t260070@kist.re.kr",
+      "tagline": "",
+      "education": "M.S/Ph.D Integrated​ Course, ​Mechanical Engineering, Seoul National University\n​B.S. Civil, Environmental & Architectural Engineering / Mechanical Engineering, Korea University",
+      "researchInterests": "Soft robots",
       "bio": ""
     },
     {
@@ -111,7 +119,8 @@
       "category": "intern",
       "photo": "/people/jung-jino.png",
       "email": "",
-      "education": "",
+      "tagline": "",
+      "education": "Materials Science & Engineering, Hanyang University",
       "researchInterests": "",
       "bio": ""
     },
@@ -122,7 +131,8 @@
       "category": "intern",
       "photo": "/people/park-boae.png",
       "email": "",
-      "education": "",
+      "tagline": "",
+      "education": "Electronic Engineering, Hanyang University",
       "researchInterests": "",
       "bio": ""
     }

@@ -37,7 +37,7 @@ export default function NewsPage() {
                 </p>
                 {item.link && (
                   <a href={item.link} target="_blank" rel="noopener noreferrer"
-                    style={{ fontSize: "0.82rem", color: "var(--accent2)", fontWeight: 500 }}>
+                    style={{ fontSize: "0.82rem", color: "var(--accent)", fontWeight: 500 }}>
                     {item.linkLabel || "Link"} ↗
                   </a>
                 )}

@@ -62,7 +62,6 @@ body {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-weight: 300;
   line-height: 1.6;
   transition: background var(--transition), color var(--transition);
 }
@@ -453,9 +452,6 @@ hr.divider, .divider {
 /* ─── Selection ──────────────────────────────────────────── */
 ::selection { background: var(--accent-soft); color: var(--accent); }
 
-/* ─── Newline support ────────────────────────────────────── */
-.pre-line { white-space: pre-line; }
-
 /* ─── Home highlights grid ───────────────────────────────── */
 .home-highlights-grid {
   display: grid;
@@ -512,7 +508,7 @@ hr.divider, .divider {
 }
 .nav-mobile-item:last-child { border-bottom: none; }
 .nav-mobile-item:hover { background: var(--accent-soft); color: var(--accent); }
-.nav-mobile-item.active { color: var(--accent); font-weight: 600; }
+.nav-mobile-item.active { color: var(--accent); font-weight: 700; }
 
 @media (max-width: 768px) {
   .nav-list { display: none !important; }
@@ -622,169 +618,3 @@ hr.divider, .divider {
 /* General mobile padding reduction */
 @media (max-width: 640px) {
   .mobile-pad {    padding-left: 1rem !important; padding-right: 1rem !important; }
-}
-
-/* ─── Carousel outer + thumbnails ────────────────────────── */
-.carousel-outer {
-  width: 100%;
-}
-.carousel-thumbs {
-  display: flex;
-  gap: 4px;
-  padding: 6px 4px 4px;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 var(--radius) var(--radius);
-}
-.carousel-thumb {
-  position: relative;
-  flex-shrink: 0;
-  width: 64px;
-  height: 48px;
-  border-radius: 3px;
-  overflow: hidden;
-  border: 2px solid transparent;
-  padding: 0;
-  background: var(--border);
-  cursor: pointer;
-  opacity: 0.65;
-  transition: opacity 0.18s, border-color 0.18s;
-}
-.carousel-thumb.active {
-  border-color: var(--accent);
-  opacity: 1;
-}
-.carousel-thumb:hover {
-  opacity: 0.9;
-}
-
-/* ═══════════════════════════════════════════════════════════
-   MOBILE RESPONSIVENESS  (≤ 640px)
-   ═══════════════════════════════════════════════════════════ */
-
-@media (max-width: 640px) {
-
-  /* Global page wrapper padding */
-  [style*="padding: 3rem 2rem"],
-  [style*="padding: 4rem 2rem"] {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
-  /* Page headings */
-  h1 { font-size: 1.4rem !important; }
-
-  /* Research page image grid — 2 cols on mobile */
-  .research-areas-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3px;
-  }
-
-  /* Research detail: topic flex rows stack vertically */
-  .research-topic-row {
-    flex-direction: column !important;
-  }
-  .research-topic-row > div:first-child,
-  .research-topic-row > div:last-child {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Gallery grid — single column */
-  .gallery-events-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* People: PI section stacks */
-  .pi-section {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-  .pi-photo {
-    width: 100% !important;
-    height: 220px !important;
-  }
-
-  /* Publications list padding */
-  .pub-list-item {
-    padding-left: 0 !important;
-  }
-
-  /* Members grid — 2 cols */
-  .members-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  /* Carousel thumbnails — smaller */
-  .carousel-thumb {
-    width: 48px !important;
-    height: 36px !important;
-  }
-
-  /* Hero buttons wrap */
-  .hero-btn {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  /* Home intro section padding */
-  .home-intro-section {
-    padding: 2.5rem 1rem 1.5rem !important;
-  }
-
-  /* Opportunities / news page */
-  .opp-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Tablet adjustments (641–900px) */
-@media (min-width: 641px) and (max-width: 900px) {
-  .research-areas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .gallery-events-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Gallery grid inline style override for small screens */
-@media (max-width: 700px) {
-  /* override the inline minmax(500px,1fr) gallery grid */
-  .gallery-card {
-    min-width: 0;
-  }
-}
-
-/* ─── Research detail page — mobile topic rows ───────────── */
-@media (max-width: 640px) {
-  /* When the image+text row wraps, make image take full width */
-  .research-topic-img-box {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-  /* Publications page */
-  .pub-item {
-    padding: 1rem 0 !important;
-  }
-  /* People page — PI photo full width when stacked */
-  .pi-section-photo {
-    width: 100% !important;
-    height: 200px !important;
-  }
-}
-
-/* ─── Tablet: research detail rows don't shrink too small ── */
-@media (max-width: 760px) {
-  /* Force research topic rows to wrap */
-  .research-topic-flex {
-    flex-wrap: wrap !important;
-  }
-  .research-topic-flex > div {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-}

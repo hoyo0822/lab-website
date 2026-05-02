@@ -9,9 +9,6 @@ export default function ResearchPage() {
       <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>
         Research Focus
       </h1>
-      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-        Multidisciplinary science at the frontier of robotics and biology
-      </p>
       <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "1.8rem" }} />
 
       <p style={{ fontSize: "0.95rem", lineHeight: 1.9, color: "var(--text-secondary)", marginBottom: "0.8rem", maxWidth: "820px" }}>
@@ -22,8 +19,10 @@ export default function ResearchPage() {
         applications from meter-scale marine energy harvesting, human-scale skin computer and actuation system
         down to microscale biomedical robots for cutting-edge cancer therapeutics.
       </p>
-      <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", marginBottom: "2.5rem" }}>
-        {research.clickNote}
+
+
+      <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.8, marginBottom: "1.6rem", maxWidth: "820px" }}>
+        Please click the below highlighting images for the details on each research subject.
       </p>
 
       {/* Research image grid */}

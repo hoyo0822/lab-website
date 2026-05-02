@@ -33,9 +33,9 @@ export default function GalleryPage() {
             </div>
 
             {/* Events grid */}
-            <div style={{
+            <div className="gallery-events-grid" style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fill, minmax(min(500px, 100%), 1fr))",
               gap: "1.5rem",
             }}>
               {eventsWithPhotos.map((event) => (

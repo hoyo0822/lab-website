@@ -1,9 +1,16 @@
 import "./globals.css";
-import NavLinks from "../components/NavLinks";
+import { Inter } from "next/font/google";
+import Header from "../components/Header";
 import { ThemeProvider } from "../components/ThemeProvider";
-import Link from "next/link";
 import lab from "../../data/lab.json";
 import Image from "next/image";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata = {
   title: "BIRD Lab @ KIST",
@@ -12,34 +19,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
-      <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={inter.variable}>
+      <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column", fontFamily: "var(--font-inter), 'Helvetica Neue', Arial, sans-serif" }}>
         <ThemeProvider>
 
           {/* ── HEADER ── */}
-          <header style={{ position: "sticky", top: 0, zIndex: 100 }}>
-            <div style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "0 1.25rem",
-              height: "68px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}>
-              <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-                <Image
-                  src="/lab-logo1.png"
-                  alt="BIRD Lab logo"
-                  width={160}
-                  height={50}
-                  style={{ objectFit: "contain", height: "46px", width: "auto" }}
-                  priority
-                />
-              </Link>
-              <NavLinks />
-            </div>
-          </header>
+          <Header />
 
           {/* ── MAIN ── */}
           <main className="page-enter" style={{ flex: 1 }}>
@@ -70,8 +55,8 @@ export default function RootLayout({ children }) {
                 </p>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-                <Image src="/lab-logo1-orig.png" alt="BIRD Lab" width={120} height={40} style={{ objectFit: "contain", height: "38px", width: "auto" }} />
-                <Image src="/kist-ci.png" alt="KIST" width={120} height={40} style={{ objectFit: "contain", height: "38px", width: "auto" }} />
+                <Image src="/lab-logo1-orig.png" alt="BIRD Lab" width={200} height={70} style={{ objectFit: "contain", height: "64px", width: "auto" }} />
+                <Image src="/kist-ci.png" alt="KIST" width={200} height={70} style={{ objectFit: "contain", height: "64px", width: "auto" }} />
               </div>
             </div>
             <div style={{ textAlign: "center", fontSize: "0.74rem", color: "var(--text-muted)", marginTop: "1.2rem" }}>

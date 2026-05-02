@@ -9,7 +9,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import IntroOverlay from "../components/IntroOverlay";
 
 export default function Home() {
-  const recentNews = newsData.items.slice(0, 8);
+  const recentNews = newsData.items.slice(0, 6);
 
   return (
     <>
@@ -32,14 +32,14 @@ export default function Home() {
         }} />
         <div style={{ position: "relative", zIndex: 2, textAlign: "center", color: "#fff", padding: "2rem 1.5rem", maxWidth: "860px" }}>
           <h1 className="hero-title" style={{
-            fontSize: "clamp(1.8rem,4.5vw,3.2rem)", fontWeight: 300,
+            fontSize: "clamp(1.8rem,4.5vw,3.2rem)", fontWeight: 100,
             letterSpacing: "0.12em", lineHeight: 1.25, marginBottom: "0.9rem",
             textShadow: "0 2px 18px rgba(0,0,0,0.4)",
           }}>
-            <strong style={{ fontWeight: 800 }}>B</strong>IO-
-            <strong style={{ fontWeight: 800 }}>I</strong>NTERACTIVE{" "}
-            <strong style={{ fontWeight: 800 }}>R</strong>OBOT{" "}
-            <strong style={{ fontWeight: 800 }}>D</strong>ESIGN LAB
+            <strong style={{ fontWeight: 500 }}>B</strong>IO-
+            <strong style={{ fontWeight: 500 }}>I</strong>NTERACTIVE{" "}
+            <strong style={{ fontWeight: 500 }}>R</strong>OBOT{" "}
+            <strong style={{ fontWeight: 500 }}>D</strong>ESIGN LAB
           </h1>
           <p className="hero-sub" style={{
             fontSize: "clamp(0.88rem,1.8vw,1.05rem)", fontWeight: 300,

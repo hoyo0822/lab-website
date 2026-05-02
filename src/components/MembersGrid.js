@@ -115,18 +115,21 @@ export default function MembersGrid({ members }) {
                   border: "1px solid var(--accent)", marginBottom: "0.5rem",
                   textTransform: "uppercase",
                 }}>
-                  {selected.category === "postdoc" ? "Postdoc / Visiting" :
-                   selected.category === "phd" ? "Graduate Student" : "Intern"}
-                </div>
-                <h2 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.2rem" }}>
-                  {selected.name}
-                </h2>
-                <p style={{ fontSize: "0.84rem", color: "var(--text-muted)", fontStyle: "italic", marginBottom: "0.6rem" }}>
                   {selected.role}
-                </p>
+                </div>
+                <div style={{ display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.2rem" }}>
+                  <h2 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--text)" }}>
+                    {selected.name}
+                  </h2>
+                  {selected.tagline && (
+                    <span style={{ fontSize: "0.78rem", fontStyle: "italic", color: "var(--text-muted)", fontWeight: 400 }}>
+                      {selected.tagline}
+                    </span>
+                  )}
+                </div>
                 {selected.email && (
                   <a href={"mailto:" + selected.email} style={{ fontSize: "0.82rem", color: "var(--accent)", wordBreak: "break-all" }}>
-                    {String.fromCharCode(10003)} {selected.email}
+                    ✉ {selected.email}
                   </a>
                 )}
               </div>
@@ -172,6 +175,13 @@ export default function MembersGrid({ members }) {
   );
 }
 
+function renderLines(value) {
+  const text = Array.isArray(value) ? value.join("\n") : (value || "");
+  return text.split("\n").map((line, i, arr) => (
+    <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+  ));
+}
+
 function DetailRow({ label, value }) {
   return (
     <div style={{ marginBottom: "0.85rem" }}>
@@ -179,7 +189,7 @@ function DetailRow({ label, value }) {
         {label}
       </p>
       <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
-        {value}
+        {renderLines(value)}
       </p>
     </div>
   );
