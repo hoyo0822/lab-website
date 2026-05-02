@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function IntroOverlay() {
-  // phase: 'show' → 'fade' → 'gone'
   const [phase, setPhase] = useState('show');
 
   useEffect(() => {
-    // Only show once per session
     if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('bird-intro-shown')) {
       setPhase('gone');
       return;
@@ -16,10 +14,20 @@ export default function IntroOverlay() {
       sessionStorage.setItem('bird-intro-shown', '1');
     }
 
-    // hold 1.6s → fade out 0.9s → remove
+    // Hide header during intro
+    document.body.classList.add('intro-active');
+
     const t1 = setTimeout(() => setPhase('fade'), 1600);
-    const t2 = setTimeout(() => setPhase('gone'), 2600);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
+    const t2 = setTimeout(() => {
+      setPhase('gone');
+      document.body.classList.remove('intro-active');
+    }, 2600);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      document.body.classList.remove('intro-active');
+    };
   }, []);
 
   if (phase === 'gone') return null;
@@ -41,14 +49,12 @@ export default function IntroOverlay() {
         userSelect: 'none',
       }}
     >
-      {/* Subtle dot grid overlay */}
       <div style={{
         position: 'absolute', inset: 0,
         backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)',
         backgroundSize: '32px 32px',
       }} />
 
-      {/* Content */}
       <div style={{
         position: 'relative',
         textAlign: 'center',
@@ -56,7 +62,6 @@ export default function IntroOverlay() {
         padding: '2rem',
         animation: 'introIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both',
       }}>
-        {/* Logo */}
         <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
           <Image
             src="/lab-logo1.png"
@@ -73,7 +78,6 @@ export default function IntroOverlay() {
           />
         </div>
 
-        {/* Lab name */}
         <h1 style={{
           fontSize: 'clamp(1rem, 3.5vw, 1.8rem)',
           fontWeight: 300,
@@ -97,7 +101,6 @@ export default function IntroOverlay() {
           Korea Institute of Science and Technology
         </p>
 
-        {/* Thin accent line */}
         <div style={{
           width: '40px',
           height: '2px',

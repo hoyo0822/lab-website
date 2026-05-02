@@ -144,7 +144,7 @@ export default function MembersGrid({ members }) {
               )}
               {selected.bio && (
                 <div style={{ marginTop: (selected.education || selected.researchInterests) ? "1rem" : 0 }}>
-                  <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.35rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>About</p>
+                  <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.35rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>About</p>
                   <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.75 }}>{selected.bio}</p>
                 </div>
               )}
@@ -185,7 +185,7 @@ function renderLines(value) {
 function DetailRow({ label, value }) {
   return (
     <div style={{ marginBottom: "0.85rem" }}>
-      <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.2rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+      <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.2rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
         {label}
       </p>
       <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>

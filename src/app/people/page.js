@@ -31,9 +31,6 @@ export default function PeoplePage() {
     <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
 
       <h1 style={{ fontSize: "1.8rem", fontWeight: 700, marginBottom: "0.4rem", color: "var(--text)" }}>People</h1>
-      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-        The minds behind BIRD Lab
-      </p>
       <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "2.5rem" }} />
 
       {/* PI Section */}

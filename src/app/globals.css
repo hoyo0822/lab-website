@@ -798,20 +798,35 @@ hr.divider, .divider {
 .site-header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 1.25rem;
+  padding: 0 1.25rem;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: none;
 }
 .site-header-logo {
-  height: 62px;
+  height: 52px;
+  display: flex;
+  align-items: center;
   transform-origin: left center;
   transition: transform 0.3s ease;
 }
-.hdr-scrolled .site-header-inner {
-  padding: 10px 1.25rem;
-}
 .hdr-scrolled .site-header-logo {
-  transform: scale(0.72);
+  transform: scale(0.78);
+}
+
+/* Hide header during intro overlay */
+.intro-active .site-header {
+  visibility: hidden;
+}
+
+/* ─── Publication highlight (from cover click) ───────────── */
+.pub-highlight {
+  border-radius: 6px;
+  animation: pubHighlight 3s ease;
+}
+@keyframes pubHighlight {
+  0%   { background: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent); }
+  75%  { background: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent); }
+  100% { background: transparent;        box-shadow: 0 0 0 0px transparent;   }
 }

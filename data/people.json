@@ -25,7 +25,7 @@
       "email": "sj.peter.choi@gmail.com",
       "tagline": "From SNU hospital",
       "education": "M.D. M.S. College of Medicine, Seoul National University\nB.S. Electrical & Computer Engineering, Seoul National University",
-      "researchInterests": "",
+      "researchInterests": "Hemodynamics",
       "bio": ""
     },
     {
@@ -118,10 +118,10 @@
       "role": "Undergraduate Intern",
       "category": "intern",
       "photo": "/people/jung-jino.png",
-      "email": "",
+      "email": "u260068@kist.re.kr",
       "tagline": "",
       "education": "Materials Science & Engineering, Hanyang University",
-      "researchInterests": "",
+      "researchInterests": "Micro-robots",
       "bio": ""
     },
     {
@@ -133,7 +133,7 @@
       "email": "",
       "tagline": "",
       "education": "Electronic Engineering, Hanyang University",
-      "researchInterests": "",
+      "researchInterests": "Micro-robots / HASEL",
       "bio": ""
     }
   ],

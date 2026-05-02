@@ -1,58 +1,95 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function CoverSlideshow({ covers }) {
   const [current, setCurrent] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [animating, setAnimating] = useState(false);
+  const router = useRouter();
 
-  useEffect(() => {
-    if (!covers || covers.length <= 1) return;
-    const timer = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % covers.length);
-        setVisible(true);
-      }, 700);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [covers]);
+  const go = useCallback((next) => {
+    if (animating) return;
+    setAnimating(true);
+    setTimeout(() => {
+      setCurrent((next + covers.length) % covers.length);
+      setAnimating(false);
+    }, 220);
+  }, [animating, covers.length]);
 
   if (!covers || covers.length === 0) return null;
   const cover = covers[current];
 
+  const handleClick = () => {
+    if (cover.pubId) {
+      router.push(`/publications?highlight=${cover.pubId}`);
+    }
+  };
+
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
-      {/* Main image */}
-      <div style={{
-        position: "relative",
-        width: "400px",
-        height: "300px",
-        borderRadius: "6px",
-        overflow: "hidden",
-        boxShadow: "var(--shadow-lg)",
-        background: "var(--bg-alt)",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "scale(1)" : "scale(0.97)",
-        transition: "opacity 0.8s ease, transform 0.8s ease",
-      }}>
-        <Image
-          src={cover.image}
-          alt={cover.journal}
-          fill
-          sizes="(max-width: 820px) 100vw, 400px"
-          style={{ objectFit: "contain", padding: "8px" }}
-        />
+
+      {/* Main image + arrows */}
+      <div style={{ position: "relative", width: "100%", maxWidth: "400px" }}>
+        {/* Prev */}
+        <button
+          onClick={() => go(current - 1)}
+          style={{
+            position: "absolute", left: "-18px", top: "50%", transform: "translateY(-50%)",
+            zIndex: 2, background: "var(--surface)", border: "1px solid var(--border)",
+            borderRadius: "50%", width: "34px", height: "34px",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontSize: "1.2rem", color: "var(--text)", cursor: "pointer",
+            boxShadow: "var(--shadow-sm)", transition: "background 0.18s",
+          }}
+          aria-label="Previous"
+        >‹</button>
+
+        {/* Image */}
+        <div
+          onClick={handleClick}
+          style={{
+            position: "relative", width: "100%", aspectRatio: "4/3",
+            borderRadius: "6px", overflow: "hidden",
+            boxShadow: "var(--shadow-lg)", background: "var(--bg-alt)",
+            opacity: animating ? 0 : 1,
+            transform: animating ? "scale(0.97)" : "scale(1)",
+            transition: "opacity 0.22s ease, transform 0.22s ease",
+            cursor: cover.pubId ? "pointer" : "default",
+          }}
+        >
+          <Image
+            src={cover.image}
+            alt={cover.journal}
+            fill
+            sizes="(max-width: 820px) 100vw, 400px"
+            style={{ objectFit: "contain", padding: "8px" }}
+          />
+        </div>
+
+        {/* Next */}
+        <button
+          onClick={() => go(current + 1)}
+          style={{
+            position: "absolute", right: "-18px", top: "50%", transform: "translateY(-50%)",
+            zIndex: 2, background: "var(--surface)", border: "1px solid var(--border)",
+            borderRadius: "50%", width: "34px", height: "34px",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontSize: "1.2rem", color: "var(--text)", cursor: "pointer",
+            boxShadow: "var(--shadow-sm)", transition: "background 0.18s",
+          }}
+          aria-label="Next"
+        >›</button>
       </div>
 
       {/* Journal label */}
       <p style={{
-        fontSize: "0.78rem", fontWeight: 600, color: "var(--text-muted)",
+        fontSize: "0.78rem", fontWeight: 500, color: "var(--text-muted)",
         letterSpacing: "0.04em", textAlign: "center",
-        opacity: visible ? 1 : 0,
-        transition: "opacity 0.4s ease",
+        opacity: animating ? 0 : 1, transition: "opacity 0.22s ease",
       }}>
         {cover.journal}
+
       </p>
 
       {/* Dots */}
@@ -61,15 +98,12 @@ export default function CoverSlideshow({ covers }) {
           {covers.map((_, i) => (
             <button
               key={i}
-              onClick={() => { setVisible(false); setTimeout(() => { setCurrent(i); setVisible(true); }, 400); }}
+              onClick={() => go(i - current)}
               style={{
-                width: i === current ? "20px" : "7px",
-                height: "7px",
-                borderRadius: "4px",
-                border: "none",
+                width: i === current ? "20px" : "7px", height: "7px",
+                borderRadius: "4px", border: "none",
                 background: i === current ? "var(--accent)" : "var(--border)",
-                cursor: "pointer",
-                padding: 0,
+                cursor: "pointer", padding: 0,
                 transition: "width 0.3s, background 0.3s",
               }}
             />
