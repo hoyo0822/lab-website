@@ -14,7 +14,9 @@ export default function Header() {
     if (!el) return;
 
     const update = () => {
-      const isScrolled = window.scrollY > 40;
+      const y = window.scrollY;
+      // 80px 넘으면 축소, 30px 미만이어야 복귀 — 진입/복귀 구간이 달라 oscillation 없음
+      const isScrolled = wasScrolled ? y > 30 : y > 80;
       if (isScrolled !== wasScrolled) {
         el.classList.toggle("hdr-scrolled", isScrolled);
         wasScrolled = isScrolled;
