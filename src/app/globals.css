@@ -788,3 +788,33 @@ hr.divider, .divider {
     max-width: 100% !important;
   }
 }
+
+/* ─── Shrinking header ───────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.28s ease, padding 0.28s ease;
+  will-change: height;
+}
+.site-header-logo {
+  height: 62px;
+  transform-origin: left center;
+  transition: transform 0.28s ease;
+  will-change: transform;
+}
+.hdr-scrolled .site-header-inner {
+  height: 68px;
+}
+.hdr-scrolled .site-header-logo {
+  transform: scale(0.74);
+}
