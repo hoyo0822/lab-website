@@ -798,23 +798,20 @@ hr.divider, .divider {
 .site-header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
-  height: 90px;
+  padding: 18px 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: height 0.28s ease, padding 0.28s ease;
-  will-change: height;
+  transition: padding 0.3s ease;
 }
 .site-header-logo {
   height: 62px;
   transform-origin: left center;
-  transition: transform 0.28s ease;
-  will-change: transform;
+  transition: transform 0.3s ease;
 }
 .hdr-scrolled .site-header-inner {
-  height: 68px;
+  padding: 10px 1.25rem;
 }
 .hdr-scrolled .site-header-logo {
-  transform: scale(0.74);
+  transform: scale(0.72);
 }
